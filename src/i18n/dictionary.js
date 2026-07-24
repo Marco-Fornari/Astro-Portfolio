@@ -19,9 +19,6 @@ export const I18N = {
       "Con un background nella <strong>produzione audiovisiva</strong> e una laurea in ambito artistico, porto in ogni progetto <strong>comunicazione chiara</strong>, <strong>pensiero critico</strong> e capacità di lavorare sotto pressione.",
     "about.stack": "Stack attuale",
     "about.secfocus": "Focus sicurezza",
-    "about.philosophy": "Filosofia",
-    "about.phil.body":
-      "Costruire sistemi.<br>Comprendere i rischi.<br><em>Migliorare la sicurezza.</em>",
     "xp.kicker": "02 / ESPERIENZA — STORIA DI SISTEMA",
     "xp.role.junior": "Junior Developer",
     "xp.j1.when": "FEB 2026 — LUG 2026",
@@ -68,9 +65,6 @@ export const I18N = {
       "With a background in <strong>audiovisual production</strong> and a degree in Arts, I bring <strong>clear communication</strong>, <strong>critical thinking</strong>, and the ability to perform under pressure into every project.",
     "about.stack": "Current stack",
     "about.secfocus": "Security focus",
-    "about.philosophy": "Philosophy",
-    "about.phil.body":
-      "Build systems.<br>Understand risks.<br><em>Improve security.</em>",
     "xp.kicker": "02 / EXPERIENCE — SYSTEM HISTORY",
     "xp.role.junior": "Junior Developer",
     "xp.j1.when": "FEB 2026 — JUL 2026",
