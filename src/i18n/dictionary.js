@@ -52,7 +52,7 @@ export const I18N = {
     "skills.human": "Competenze umane",
     "contact.kicker": "03 / CONTATTI",
     "contact.headline":
-      "La sicurezza è un processo<br><em>, non un prodotto.</em>",
+      "La sicurezza è un processo<br><em> non un prodotto.</em>",
     "contact.cv": "Scarica il CV",
   },
   en: {
