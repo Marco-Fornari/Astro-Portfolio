@@ -103,10 +103,7 @@ export const I18N = {
     "skills.tools": "Tools &amp; Infrastructure",
     "skills.human": "Human skills",
     "contact.kicker": "03 / CONTACT — OPEN CONNECTION",
-    "contact.headline":
-      "Let\u2019s build something<br><em>worth understanding.</em>",
-    "contact.lede":
-      "Open to conversations about software development, cybersecurity and interesting problems.",
+    "contact.headline": "Safety is a process<br><em> not a product.</em>",
     "contact.cv": "Download CV",
   },
 };
