@@ -102,7 +102,7 @@ export const I18N = {
     "skills.cyber": "Cybersecurity",
     "skills.tools": "Tools &amp; Infrastructure",
     "skills.human": "Human skills",
-    "contact.kicker": "03 / CONTACT — OPEN CONNECTION",
+    "contact.kicker": "03 / CONTACT",
     "contact.headline": "Safety is a process<br><em> not a product.</em>",
     "contact.cv": "Download CV",
   },
