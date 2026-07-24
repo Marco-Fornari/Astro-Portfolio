@@ -1,0 +1,60 @@
+---
+import "../styles/global.css";
+const { title = "Marco Fornari — Developer · Cybersecurity Enthusiast",
+        description = "Marco Fornari. Junior Developer focused on building software and understanding the systems, risks and vulnerabilities behind it." } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preload" as="image" href="/hero-surface.jpg" />
+</head>
+<body data-route="home">
+  <div id="progress" aria-hidden="true"></div>
+  <canvas id="system" aria-hidden="true"></canvas>
+
+  <button id="scrollBtn" class="scroll-btn" type="button" aria-label="Scroll to next section">
+    <svg class="ring" viewBox="0 0 80 80" aria-hidden="true">
+      <defs><path id="ringPath" d="M40,40 m-30,0 a30,30 0 1,1 60,0 a30,30 0 1,1 -60,0"/></defs>
+      <text><textPath href="#ringPath" startOffset="0">SCROLL&#160;&#160;·&#160;&#160;SCROLL&#160;&#160;·&#160;&#160;SCROLL&#160;&#160;·&#160;&#160;</textPath></text>
+    </svg>
+    <span class="arr" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 5v13m0 0l-5.5-5.5M12 18l5.5-5.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </button>
+
+  <header>
+    <a class="id" href="#home" aria-label="Back to top">
+      <b>MARCO FORNARI</b>
+      <span>DEVELOPER · CYBERSECURITY ENTHUSIAST</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#home" data-route="home" class="home-link">HOME</a>
+      <a href="#about" data-route="about"><i>01 /</i>ABOUT</a>
+      <a href="#experience" data-route="experience"><i>02 /</i>EXPERIENCE</a>
+      <a href="#contact" data-route="contact"><i>03 /</i>CONTACT</a>
+    </nav>
+    <div class="hright">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="it" class="on" type="button">IT</button>
+        <span aria-hidden="true">/</span>
+        <button data-lang="en" type="button">EN</button>
+      </div>
+      <button id="themeBtn" class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">◐</button>
+      <div class="index" aria-hidden="true"><b id="idxCur">01</b> / 04</div>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <script>
+    // Astro bundles this module graph (Vite) into a hashed /_astro/ asset.
+    import "../scripts/main.js";
+  </script>
+</body>
+</html>
