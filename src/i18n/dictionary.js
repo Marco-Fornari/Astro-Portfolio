@@ -5,12 +5,9 @@
 export const I18N = {
   it: {
     "hero.role": "Developer&nbsp;&nbsp;|&nbsp;&nbsp;Cybersecurity",
-    "about.kicker": "01 / CHI SONO — PROFILO DI SISTEMA",
+    "about.kicker": "01 / CHI SONO",
     "about.lede":
       "Sviluppo software.<br>Appassionato di cybersecurity, cerco di capire dove i sistemi cedono.",
-    "about.trajectory": "Percorso",
-    "about.traj.body":
-      "2022–24 &nbsp;STORYTELLING · AUDIOVISIVO<br>2025–26 &nbsp;SVILUPPO WEB &amp; SOFTWARE<br>2026&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>SVILUPPO ORIENTATO ALLA SICUREZZA</b>",
     "about.profile": "Profilo",
     "about.p1":
       "Ciao, sono Marco, un <strong>Junior Software Developer</strong> con esperienza nello <strong>sviluppo di applicazioni</strong> (C#, JavaScript, SQL, Flutter) e un focus crescente sulla <strong>cybersecurity</strong>.",
@@ -57,12 +54,9 @@ export const I18N = {
   },
   en: {
     "hero.role": "Developer&nbsp;&nbsp;|&nbsp;&nbsp;Cybersecurity",
-    "about.kicker": "01 / ABOUT — SYSTEM PROFILE",
+    "about.kicker": "01 / ABOUT",
     "about.lede":
       "Developer building software.<br>Cybersecurity enthusiast trying to understand where systems fail.",
-    "about.trajectory": "Trajectory",
-    "about.traj.body":
-      "2022–24 &nbsp;STORYTELLING · AUDIOVISUAL<br>2025–26 &nbsp;WEB &amp; SOFTWARE DEVELOPMENT<br>2026&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>SECURITY-FOCUSED DEVELOPMENT</b>",
     "about.profile": "Profile",
     "about.p1":
       "Hi, I'm Marco, a <strong>Junior Software Developer</strong> with experience in <strong>application development</strong> (C#, JavaScript, SQL, Flutter) and a growing focus on <strong>cybersecurity</strong>.",
