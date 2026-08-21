@@ -318,7 +318,7 @@ h3{font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:.26em;c
 /* ============================================================
    CONTACT
    ============================================================ */
-#contact{min-height:100vh;display:flex;align-items:center}
+#contact{min-height:100vh;display:flex;align-items:flex-start;padding-top:clamp(56px,10vh,110px)}
 #contact .sheet{width:100%}
 .bridge{
   display:flex;align-items:center;gap:18px;font-family:var(--mono);
