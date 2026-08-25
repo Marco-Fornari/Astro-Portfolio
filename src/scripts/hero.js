@@ -17,7 +17,9 @@ const scrollBtn = document.getElementById("scrollBtn");
 const rc   = document.getElementById("reveal");
 const rctx = rc.getContext("2d");
 const img2 = new Image();
-img2.src = "/hero-analysis.jpg";
+img2.src = "/hero-2.jpg";
+/* horizontal focal point of both portraits — must match object-position in global.css */
+const focalX = () => (view.mobile ? 0.72 : 0.62);
 const scan = { x:-999, y:-999, tx:-999, ty:-999, on:false, amt:0 };
 
 function sizeReveal() {
@@ -46,8 +48,9 @@ function updateHero() {
   if (reduceMotion) { heroVeil.style.opacity = 0; return; }
   /* identity recedes, surface zooms, page veil eases the hand-off */
   const p = heroProg;
-  heroId.style.opacity = Math.max(0, 1 - p * 1.3);
-  heroId.style.transform = `translateY(${-p * 70}px) scale(${1 - p * 0.06})`;
+  /* the type holds through the hand-off to layer 2, then leaves with the veil */
+  heroId.style.opacity = Math.max(0, 1 - Math.max(0, p - 0.5) * 2.4);
+  heroId.style.transform = `translateY(${-p * 48}px) scale(${1 - p * 0.04})`;
   heroMedia.style.transform = `scale(${1 + p * 0.07})`;
   heroVeil.style.opacity = Math.max(0, (p - 0.6) * 1.6);   /* earlier, gentler fade into the flow */
 }
@@ -65,7 +68,7 @@ function drawReveal() {
   const iw = img2.naturalWidth, ih = img2.naturalHeight;
   const sc = Math.max(w / iw, h / ih);
   const dw = iw * sc, dh = ih * sc;
-  const dx = (w - dw) / 2, dy = (h - dh) / 2;
+  const dx = (w - dw) * focalX(), dy = (h - dh) / 2;
   const drawImg2 = () => rctx.drawImage(img2, dx, dy, dw, dh);
 
   /* 1 — scroll-driven scan: the analysis layer wipes down as the story advances */

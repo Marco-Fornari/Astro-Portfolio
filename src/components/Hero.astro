@@ -1,17 +1,19 @@
 ---
-// Pinned cinematic opening — surface image + scroll-driven analysis layer
+// Pinned cinematic opening — portrait (layer 1) + scroll-driven reveal of layer 2
 ---
 <section id="home" aria-label="Introduction">
   <div class="hero-sticky">
     <div class="hero-full" id="inspector" role="img"
-         aria-label="Full-screen photograph of a hand on a retro terminal. Scroll or move the pointer to inspect a second analytical layer beneath the surface.">
+         aria-label="Portrait of Marco Fornari. Scroll or move the pointer to reveal a second layer beneath the surface.">
       <div class="hero-media" id="heroMedia">
-        <img id="imgBase" alt="" src="/hero-surface.jpg">
+        <img id="imgBase" alt="" src="/hero-1.jpg" width="1376" height="768"
+             fetchpriority="high" decoding="async">
         <canvas id="reveal" aria-hidden="true"></canvas>
       </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
       <div class="hero-veil" id="heroVeil"></div>
       <div class="hero-id" id="heroId">
-        <h1>Marco Fornari</h1>
+        <h1 class="hero-title" data-i18n="hero.title"><span>DIFENDI</span><span>ANALIZZA</span><span>PROTEGGI</span></h1>
         <p data-i18n="hero.role">Cybersecurity&nbsp;&nbsp;|&nbsp;&nbsp;System Engineering</p>
       </div>
     </div>

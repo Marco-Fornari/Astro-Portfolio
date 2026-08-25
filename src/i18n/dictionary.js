@@ -4,6 +4,7 @@
 
 export const I18N = {
   it: {
+    "hero.title": "<span>DIFENDI</span><span>ANALIZZA</span><span>PROTEGGI</span>",
     "hero.role": "Cybersecurity&nbsp;&nbsp;|&nbsp;&nbsp;System Engineering",
     "about.kicker": "01 / CHI SONO",
     "about.lede":
@@ -50,6 +51,7 @@ export const I18N = {
     "contact.cv": "Scarica il CV",
   },
   en: {
+    "hero.title": "<span>DEFEND.</span><span>ANALYZE.</span><span>PROTECT</span>",
     "hero.role": "Cybersecurity&nbsp;&nbsp;|&nbsp;&nbsp;System Engineering",
     "about.kicker": "01 / ABOUT",
     "about.lede":
