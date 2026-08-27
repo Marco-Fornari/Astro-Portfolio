@@ -19,7 +19,7 @@ const rctx = rc.getContext("2d");
 const img2 = new Image();
 img2.src = "/hero-2.jpg";
 /* horizontal focal point of both portraits — must match object-position in global.css */
-const focalX = () => (view.mobile ? 0.72 : 0.62);
+const focalX = () => (view.mobile ? 0.80 : 0.62);
 const scan = { x:-999, y:-999, tx:-999, ty:-999, on:false, amt:0 };
 
 function sizeReveal() {
