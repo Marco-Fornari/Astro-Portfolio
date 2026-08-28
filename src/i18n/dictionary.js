@@ -5,7 +5,7 @@
 export const I18N = {
   it: {
     "hero.title": "<span>DIFENDI</span><span>ANALIZZA</span><span>PROTEGGI</span>",
-    "hero.role": "Developer&nbsp;&nbsp;|&nbsp;&nbsp;Cybersecurity",
+    "hero.role": "Cybersecurity",
     "about.kicker": "01 / CHI SONO",
     "about.lede":
       "Sviluppo software.<br>Appassionato di cybersecurity, cerco di capire dove i sistemi cedono.",
@@ -52,7 +52,7 @@ export const I18N = {
   },
   en: {
     "hero.title": "<span>DEFEND.</span><span>ANALYZE.</span><span>PROTECT</span>",
-    "hero.role": "Developer&nbsp;&nbsp;|&nbsp;&nbsp;Cybersecurity",
+    "hero.role": "Cybersecurity",
     "about.kicker": "01 / ABOUT",
     "about.lede":
       "Developer building software.<br>Cybersecurity enthusiast trying to understand where systems fail.",
