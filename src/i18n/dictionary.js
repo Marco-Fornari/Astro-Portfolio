@@ -9,26 +9,27 @@ export const I18N = {
     "hero.role": "Cybersecurity",
     "about.kicker": "01 / CHI SONO",
     "about.lede":
-      "Sviluppo software.<br>Appassionato di cybersecurity, cerco di capire dove i sistemi cedono.",
+      "Monitoro, analizzo, correlo.<br>Costruisco strumenti per capire dove i sistemi cedono.",
     "about.profile": "Profilo",
     "about.p1":
-      "Ciao, sono Marco, un ragazzo con esperienza nello <strong>sviluppo di applicazioni</strong> (C#, JavaScript, SQL, Flutter) e un focus crescente sulla <strong>cybersecurity</strong>.",
+      "Ciao, sono Marco: <strong>Junior SOC Analyst</strong> e developer, orientato a security operations e system engineering. Ho esperienza pratica in detection di minacce email, analisi di log e threat intelligence su ambienti Linux containerizzati.",
     "about.p2":
-      "Mi sono diplomato con <strong>110/110 e lode</strong> all'ITS Smart Academy di Fermo.",
+      "Ho progettato una piattaforma anti-phishing e Business Email Compromise per PMI, con analisi di header e URL, estrazione degli IoC e correlazione su 5 feed di threat intelligence. Il <strong>risk scoring</strong> risultante supporta il triage e l'escalation degli eventi, con rate limiting, caching e fallback per la continuità del servizio.",
     "about.p3":
-      "Sto costruendo una solida specializzazione in <strong>cybersecurity</strong>, studiando come i sistemi falliscono: phishing, <strong>threat intelligence</strong>, <strong>cyber risk</strong> e <strong>application security</strong>.",
+      "Formazione in Cybersecurity, Cyber Risk e Data Protection (Università Politecnica delle Marche, Google Cybersecurity Certificate). Diploma ITS in Industrial Software Development con <strong>110/110 e lode</strong>, CEH in preparazione.",
     "about.p4":
-      "Con un background nella <strong>produzione audiovisiva</strong> e una laurea in ambito artistico, porto in ogni progetto <strong>comunicazione chiara</strong>, <strong>pensiero critico</strong> e capacità di lavorare sotto pressione.",
+      "Ho una laurea in Arti e Scienze dello Spettacolo e anni di produzione audiovisiva alle spalle: questo mi dà comunicazione tecnica chiara, pensiero critico e autonomia nella gestione dei progetti.",
     "about.stack": "Stack attuale",
     "about.secfocus": "Focus sicurezza",
     "xp.kicker": "02 / ESPERIENZA — STORIA DI SISTEMA",
-    "xp.role.junior": "Junior Developer",
+    "xp.j1.role": "Junior Developer · Security Engineering",
+    "xp.j2.role": "Junior Developer",
     "xp.j1.when": "FEB 2026 — LUG 2026",
     "xp.j1.desc":
-      "Sviluppo di soluzioni software e strumenti orientati alla sicurezza per l'analisi delle email e il rilevamento del phishing, incluso il lavoro su piattaforme anti-phishing.",
+      "Sviluppo di Overguard, piattaforma di email security anti-phishing e Business Email Compromise per PMI: analisi automatizzata di header SMTP, mittente, dominio e URL con estrazione e correlazione degli IoC; risk scoring multi-segnale su 5 feed di threat intelligence a supporto del triage e dell'escalation degli eventi; rate limiting per provider, caching dei verdetti e fallback tra le fonti per la continuità della detection, con modulo DLP semantico sui contenuti in uscita. Backend .NET 10 in Clean Architecture, PostgreSQL, API REST con autenticazione JWT e deployment Docker su Linux; estensioni Chrome MV3 e Thunderbird MV2 integrate con il backend.",
     "xp.j2.when": "APR 2025 — GEN 2026",
     "xp.j2.desc":
-      "Sviluppo web, gestione database, integrazione di API, automazione e sviluppo frontend/backend.",
+      "Automazione della pubblicazione dei contenuti del portale via API REST (WordPress, Google Sheets); gestione del database MySQL con query SQL per verifica e bonifica dei dati; sviluppo frontend/backend (HTML, CSS, JavaScript, PHP).",
     "edu.e4.when": "IN CORSO — 2026",
     "edu.title": "Formazione &amp; Certificazioni",
     "edu.e1.sub":
@@ -56,26 +57,27 @@ export const I18N = {
     "hero.role": "Cybersecurity",
     "about.kicker": "01 / ABOUT",
     "about.lede":
-      "Developer building software.<br>Cybersecurity enthusiast trying to understand where systems fail.",
+      "I monitor, analyse, correlate.<br>I build tools to understand where systems fail.",
     "about.profile": "Profile",
     "about.p1":
-      "Hi, I'm Marco, a <strong>Junior Software Developer</strong> with experience in <strong>application development</strong> (C#, JavaScript, SQL, Flutter) and a growing focus on <strong>cybersecurity</strong>.",
+      "Hi, I'm Marco: <strong>Junior SOC Analyst</strong> and developer, focused on security operations and system engineering. I have hands-on experience in email threat detection, log analysis and threat intelligence on containerized Linux environments.",
     "about.p2":
-      "I graduated with <strong>110/110 cum laude</strong> from ITS Smart Academy of Fermo.",
+      "I designed an anti-phishing and Business Email Compromise platform for SMBs, with header and URL analysis, IoC extraction and correlation across 5 threat intelligence feeds. The resulting <strong>risk scoring</strong> supports event triage and escalation, with rate limiting, caching and fallback for service continuity.",
     "about.p3":
-      "I'm currently building a strong specialization in <strong>cybersecurity</strong>, studying how software fails: phishing, <strong>threat intelligence</strong>, <strong>cyber risk</strong>, and <strong>application security</strong>.",
+      "Training in Cybersecurity, Cyber Risk &amp; Data Protection (Università Politecnica delle Marche, Google Cybersecurity Certificate). ITS diploma in Industrial Software Development with <strong>110/110 cum laude</strong>, CEH in preparation.",
     "about.p4":
-      "With a background in <strong>audiovisual production</strong> and a degree in Arts, I bring <strong>clear communication</strong>, <strong>critical thinking</strong>, and the ability to perform under pressure into every project.",
+      "I have a degree in Arts and Performance Studies and years of audiovisual production behind me: this gives me clear technical communication, critical thinking and independent project ownership.",
     "about.stack": "Current stack",
     "about.secfocus": "Security focus",
     "xp.kicker": "02 / EXPERIENCE — SYSTEM HISTORY",
-    "xp.role.junior": "Junior Developer",
+    "xp.j1.role": "Junior Developer · Security Engineering",
+    "xp.j2.role": "Junior Developer",
     "xp.j1.when": "FEB 2026 — JUL 2026",
     "xp.j1.desc":
-      "Developing software solutions and security-oriented tools for email analysis, phishing detection including work on anti-phishing platforms.",
+      "Development of Overguard, an email security platform against phishing and Business Email Compromise for SMBs: automated analysis of SMTP headers, sender, domain and URLs with IoC extraction and correlation; multi-signal risk scoring across 5 threat intelligence feeds to support event triage and escalation; rate limiting, verdict caching and source fallback for detection continuity, plus a semantic DLP module on outbound content. Backend in .NET 10 Clean Architecture, PostgreSQL, JWT-secured REST APIs, Docker deployment on Linux; Chrome MV3 and Thunderbird MV2 extensions integrated with the backend.",
     "xp.j2.when": "APR 2025 — JAN 2026",
     "xp.j2.desc":
-      "Web development, database management, API integrations, automation and frontend/backend development.",
+      "Automation of portal content publishing via REST APIs (WordPress, Google Sheets); MySQL database management with SQL queries for data verification and cleanup; frontend and backend development (HTML, CSS, JavaScript, PHP).",
     "edu.e4.when": "IN PROGRESS — 2026",
     "edu.title": "Education &amp; Certifications",
     "edu.e1.sub":
