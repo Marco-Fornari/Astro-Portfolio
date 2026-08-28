@@ -18,8 +18,6 @@ addEventListener("scroll", () => {
 function setNav(route) {
   document.querySelectorAll("nav a").forEach(a =>
     a.classList.toggle("on", a.dataset.route === route));
-  const idx = document.getElementById("idxCur");
-  if (idx) idx.textContent = String(routes.indexOf(route) + 1).padStart(2, "0");
   document.body.dataset.route = route;
 }
 

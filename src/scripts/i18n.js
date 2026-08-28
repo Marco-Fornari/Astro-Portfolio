@@ -10,12 +10,9 @@ function applyLang(lang) {
     const v = dict[el.dataset.i18n];
     if (v != null) el.innerHTML = v;
   });
-  /* nav labels keep their "01 /" index prefix where present */
   document.querySelectorAll("nav a[data-route]").forEach(a => {
     const lbl = NAV_I18N[lang][a.dataset.route];
-    if (!lbl) return;
-    const i = a.querySelector("i");
-    a.innerHTML = (i ? i.outerHTML : "") + lbl;
+    if (lbl) a.textContent = lbl;
   });
   document.documentElement.lang = lang;
   document.querySelectorAll(".lang button").forEach(b =>

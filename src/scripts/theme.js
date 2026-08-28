@@ -32,14 +32,6 @@ export const ink = a => `rgba(${THEME.inkRGB},${a})`;
 export const acc = a => `rgba(${THEME.accentRGB},${a})`;
 
 export function initTheme() {
-  let saved = null;
-  try { saved = localStorage.getItem("mf-theme"); } catch (e) {}
-  if (saved === "dark") document.documentElement.classList.add("dark");
+  /* single canonical palette — the theme switch was removed from the header */
   refreshTheme();
-  const btn = document.getElementById("themeBtn");
-  if (btn) btn.addEventListener("click", () => {
-    const dark = document.documentElement.classList.toggle("dark");
-    try { localStorage.setItem("mf-theme", dark ? "dark" : "light"); } catch (e) {}
-    refreshTheme();
-  });
 }

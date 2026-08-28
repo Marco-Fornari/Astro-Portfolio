@@ -162,27 +162,15 @@ header{
   display:flex;align-items:center;justify-content:space-between;
   padding:0 var(--pad);pointer-events:none;
 }
-header .id{
-  pointer-events:auto;text-decoration:none;color:var(--ink);display:block;
-  transition:opacity .4s;
-}
-header .id b{display:block;font-size:13px;letter-spacing:.22em;font-weight:600}
-header .id span{
-  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;
-  color:var(--ink-dim);margin-top:3px;
-}
-nav{display:flex;gap:clamp(14px,2.6vw,40px);pointer-events:auto}
+nav{display:flex;align-items:center;gap:clamp(16px,2.6vw,40px);pointer-events:auto}
 nav a{
   font-family:var(--mono);font-size:11px;letter-spacing:.14em;
   color:var(--ink-dim);text-decoration:none;padding:6px 2px;
   border-bottom:1px solid transparent;transition:color .25s,border-color .25s;
 }
-nav a i{font-style:normal;color:var(--ink-faint);margin-right:6px}
 nav a:hover{color:var(--ink)}
 nav a.on{color:var(--ink);border-bottom-color:var(--accent)}
-nav a.on i{color:var(--accent)}
-.hright{display:flex;align-items:center;gap:16px;pointer-events:auto}
-.lang{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;letter-spacing:.14em}
+.lang{display:flex;align-items:center;gap:7px;pointer-events:auto;font-family:var(--mono);font-size:11px;letter-spacing:.14em}
 .lang span{color:var(--ink-faint)}
 .lang button{background:none;border:0;padding:2px 1px;cursor:pointer;color:var(--ink-faint);letter-spacing:.14em;font-family:inherit;font-size:inherit;transition:color .25s}
 .lang button:hover{color:var(--ink-dim)}
@@ -190,29 +178,10 @@ nav a.on i{color:var(--accent)}
 body:not([data-route="home"]) .lang button{color:rgba(255,255,255,.55)}
 body:not([data-route="home"]) .lang button.on{color:#fff}
 body:not([data-route="home"]) .lang span{color:rgba(255,255,255,.4)}
-.theme-toggle{
-  width:30px;height:30px;border:1px solid var(--line-strong);background:transparent;
-  color:var(--ink-dim);font-size:14px;line-height:1;cursor:pointer;border-radius:50%;
-  transition:color .25s,border-color .25s,transform .4s var(--ease-out);
-}
-.theme-toggle:hover{color:var(--ink);border-color:var(--accent);transform:rotate(180deg)}
-.index{
-  font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--ink-dim);
-  min-width:64px;text-align:right;
-}
-.index b{color:var(--ink);font-weight:500}
-body[data-route="home"] header .id{opacity:0;pointer-events:none}
 body[data-route="home"] nav .home-link{display:none}
-body:not([data-route="home"]) header .id b,
-body:not([data-route="home"]) header .id span,
-body:not([data-route="home"]) nav a,
-body:not([data-route="home"]) nav a i,
-body:not([data-route="home"]) .index,
-body:not([data-route="home"]) .index b{color:#fff}
+body:not([data-route="home"]) nav a{color:#fff}
 body:not([data-route="home"]) nav a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.4)}
 body:not([data-route="home"]) nav a.on{border-bottom-color:var(--accent)}
-body:not([data-route="home"]) nav a.on i{color:var(--accent)}
-body:not([data-route="home"]) .theme-toggle{color:#fff;border-color:rgba(255,255,255,.4)}
 
 /* ============================================================
    FLOW / SECTIONS
@@ -420,12 +389,14 @@ footer{
 }
 @media (max-width:640px){
   :root{--nav-h:64px}
-  header .id span{display:none}
-  nav a i{display:none}
-  .index{display:none}
   nav{gap:14px}
-  .hright{gap:10px}
   #home{height:160vh}
+}
+/* very narrow phones: keep the row on one line without wrapping */
+@media (max-width:420px){
+  nav{gap:11px}
+  nav a{font-size:10px;letter-spacing:.08em}
+  .lang{font-size:10px;gap:5px}
 }
 
 /* ============================================================
