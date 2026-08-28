@@ -90,7 +90,15 @@
    BASE
    ============================================================ */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+  /* full-page scroll: il viewport aggancia l'inizio di ogni sezione */
+  scroll-snap-type:y mandatory;
+}
+/* su mobile lo snap resta ma è permissivo: scroll touch naturale */
+@media (max-width:699px){
+  html{scroll-snap-type:y proximity}
+}
 body{
   background:var(--bg);
   transition:background .5s,color .5s;
@@ -187,7 +195,15 @@ body:not([data-route="home"]) nav a.on{border-bottom-color:var(--accent)}
    FLOW / SECTIONS
    ============================================================ */
 main{position:relative;z-index:10}
-section{position:relative;padding:clamp(90px,16vh,180px) var(--pad)}
+section{
+  position:relative;
+  padding:clamp(90px,16vh,180px) var(--pad);
+  /* ogni capitolo occupa almeno una pagina intera (svh = viewport reale su mobile) */
+  min-height:100vh;
+  min-height:100svh;
+  scroll-snap-align:start;
+  scroll-snap-stop:always;  /* un gesto = una pagina, niente salti multipli */
+}
 .sheet{max-width:1280px;margin:0 auto}
 .kicker{
   font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--accent);
@@ -252,6 +268,14 @@ h3{font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:.26em;c
   text-shadow:0 1px 16px rgba(0,0,0,.6);
   opacity:0;animation:heroLine .9s .38s cubic-bezier(.22,.61,.36,1) forwards;
 }
+/* punto di aggancio a fine reveal: senza questo, lo snap "mandatory"
+   non avrebbe posizioni valide tra il 48% dell'hero (190vh) e About,
+   e rimbalzerebbe in cima mentre si attraversa la parte finale */
+.hero-snap{
+  position:absolute;left:0;bottom:0;width:1px;height:100vh;
+  scroll-snap-align:start;scroll-snap-stop:always;
+  pointer-events:none;visibility:hidden;
+}
 /* subtle darkening as the hero cedes to the flow */
 .hero-veil{position:absolute;inset:0;z-index:3;background:var(--bg);opacity:0;pointer-events:none}
 
@@ -312,7 +336,7 @@ h3{font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:.26em;c
 /* ============================================================
    CONTACT
    ============================================================ */
-#contact{min-height:100vh;display:flex;align-items:flex-start;padding-top:clamp(56px,10vh,110px)}
+#contact{min-height:100vh;min-height:100svh;display:flex;align-items:flex-start;padding-top:clamp(56px,10vh,110px)}
 #contact .sheet{width:100%}
 .bridge{
   display:flex;align-items:center;gap:18px;font-family:var(--mono);
@@ -403,6 +427,6 @@ footer{
    REDUCED MOTION
    ============================================================ */
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
+  html{scroll-behavior:auto;scroll-snap-type:y proximity}
   *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
 }
