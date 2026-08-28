@@ -261,6 +261,9 @@ h3{font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:.26em;c
   display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
   text-align:left;padding:0 var(--pad);will-change:transform,opacity;
 }
+/* shrink-wraps to the widest title line, so the subtitle below shares its
+   exact center axis instead of sitting flush against the ragged left edge */
+.hero-copy{width:fit-content;max-width:100%;text-align:center}
 .hero-title{
   font-size:clamp(38px,7vw,104px);line-height:.92;
   max-width:min(52%,780px);
@@ -274,7 +277,7 @@ h3{font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:.26em;c
 .hero-title span:nth-child(2){animation-delay:.11s}
 .hero-title span:nth-child(3){animation-delay:.22s}
 @keyframes heroLine{to{opacity:1;transform:none}}
-.hero-id p{
+.hero-copy p{
   margin-top:24px;font-family:var(--mono);font-size:clamp(10px,1.1vw,13px);
   letter-spacing:.42em;color:var(--ink-dim);text-transform:uppercase;
   text-shadow:0 1px 16px rgba(0,0,0,.6);
@@ -413,7 +416,7 @@ footer{
   }
   .hero-id{justify-content:flex-end;padding-bottom:clamp(104px,17vh,150px)}
   .hero-title{font-size:clamp(38px,12.5vw,64px);max-width:100%}
-  .hero-id p{margin-top:18px;letter-spacing:.3em}
+  .hero-copy p{margin-top:18px;letter-spacing:.3em}
 }
 @media (max-width:640px){
   :root{--nav-h:64px}

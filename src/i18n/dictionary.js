@@ -5,19 +5,19 @@
 export const I18N = {
   it: {
     "hero.title": "<span>DIFENDI</span><span>ANALIZZA</span><span>PROTEGGI</span>",
-    "hero.role": "Cybersecurity&nbsp;&nbsp;|&nbsp;&nbsp;System Engineering",
+    "hero.role": "Developer&nbsp;&nbsp;|&nbsp;&nbsp;Cybersecurity",
     "about.kicker": "01 / CHI SONO",
     "about.lede":
-      "Monitoro, analizzo, correlo.<br>Costruisco strumenti per capire dove i sistemi cedono.",
+      "Sviluppo software.<br>Appassionato di cybersecurity, cerco di capire dove i sistemi cedono.",
     "about.profile": "Profilo",
     "about.p1":
-      "Ciao, sono Marco — un profilo junior in ambito <strong>Cybersecurity</strong> e <strong>System Engineering</strong>, con competenze in monitoraggio e analisi degli eventi di sicurezza, <strong>analisi dei log</strong>, <strong>threat intelligence</strong> e sviluppo di soluzioni security-oriented.",
+      "Ciao, sono Marco, un ragazzo con esperienza nello <strong>sviluppo di applicazioni</strong> (C#, JavaScript, SQL, Flutter) e un focus crescente sulla <strong>cybersecurity</strong>.",
     "about.p2":
-      "Ho progettato tool per il <strong>rilevamento di phishing e BEC</strong>, integrando <strong>5 fonti di threat intelligence</strong> per la correlazione degli indicatori, il <strong>risk scoring</strong> e il supporto al triage degli eventi — su backend .NET in Clean Architecture, con PostgreSQL e deployment Docker su Linux.",
+      "Mi sono diplomato con <strong>110/110 e lode</strong> all'ITS Smart Academy di Fermo.",
     "about.p3":
-      "Sono diplomato ITS in Industrial Software Development con <strong>110/110 e lode</strong>, con formazione in <strong>cyber risk e data protection</strong> tra Google Cybersecurity Certificate e Università Politecnica delle Marche. <strong>CEH</strong> in preparazione.",
+      "Sto costruendo una solida specializzazione in <strong>cybersecurity</strong>, studiando come i sistemi falliscono: phishing, <strong>threat intelligence</strong>, <strong>cyber risk</strong> e <strong>application security</strong>.",
     "about.p4":
-      "Con una laurea in Arti e Scienze dello Spettacolo e anni di <strong>produzione audiovisiva</strong> alle spalle, porto in ogni progetto <strong>comunicazione tecnica chiara</strong>, <strong>pensiero critico</strong> e gestione autonoma dei progetti.",
+      "Con un background nella <strong>produzione audiovisiva</strong> e una laurea in ambito artistico, porto in ogni progetto <strong>comunicazione chiara</strong>, <strong>pensiero critico</strong> e capacità di lavorare sotto pressione.",
     "about.stack": "Stack attuale",
     "about.secfocus": "Focus sicurezza",
     "xp.kicker": "02 / ESPERIENZA — STORIA DI SISTEMA",
@@ -52,19 +52,19 @@ export const I18N = {
   },
   en: {
     "hero.title": "<span>DEFEND.</span><span>ANALYZE.</span><span>PROTECT</span>",
-    "hero.role": "Cybersecurity&nbsp;&nbsp;|&nbsp;&nbsp;System Engineering",
+    "hero.role": "Developer&nbsp;&nbsp;|&nbsp;&nbsp;Cybersecurity",
     "about.kicker": "01 / ABOUT",
     "about.lede":
-      "I monitor, analyse, correlate.<br>I build tools to understand where systems fail.",
+      "Developer building software.<br>Cybersecurity enthusiast trying to understand where systems fail.",
     "about.profile": "Profile",
     "about.p1":
-      "Hi, I'm Marco — a junior profile in <strong>Cybersecurity</strong> and <strong>System Engineering</strong>, with skills in security event monitoring, <strong>log analysis</strong>, <strong>threat intelligence</strong> and the development of security-oriented solutions.",
+      "Hi, I'm Marco, a <strong>Junior Software Developer</strong> with experience in <strong>application development</strong> (C#, JavaScript, SQL, Flutter) and a growing focus on <strong>cybersecurity</strong>.",
     "about.p2":
-      "I designed tools for <strong>phishing and BEC detection</strong>, integrating <strong>5 threat intelligence sources</strong> for indicator correlation, <strong>risk scoring</strong> and event triage support — on a .NET backend in Clean Architecture, with PostgreSQL and Docker deployment on Linux.",
+      "I graduated with <strong>110/110 cum laude</strong> from ITS Smart Academy of Fermo.",
     "about.p3":
-      "I graduated from ITS in Industrial Software Development with <strong>110/110 cum laude</strong>, with training in <strong>cyber risk and data protection</strong> through the Google Cybersecurity Certificate and Università Politecnica delle Marche. <strong>CEH</strong> in preparation.",
+      "I'm currently building a strong specialization in <strong>cybersecurity</strong>, studying how software fails: phishing, <strong>threat intelligence</strong>, <strong>cyber risk</strong>, and <strong>application security</strong>.",
     "about.p4":
-      "With a degree in Arts and Performance Studies and years of <strong>audiovisual production</strong> behind me, I bring <strong>clear technical communication</strong>, <strong>critical thinking</strong> and independent project ownership into every project.",
+      "With a background in <strong>audiovisual production</strong> and a degree in Arts, I bring <strong>clear communication</strong>, <strong>critical thinking</strong>, and the ability to perform under pressure into every project.",
     "about.stack": "Current stack",
     "about.secfocus": "Security focus",
     "xp.kicker": "02 / EXPERIENCE — SYSTEM HISTORY",
