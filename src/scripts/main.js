@@ -6,12 +6,14 @@ import { initLang } from "./i18n.js";
 import { initViewport } from "./viewport.js";
 import { initHero, frameHero } from "./hero.js";
 import { initScroll } from "./scroll.js";
+import { initRouteFlush } from "./route-flush.js";
 
 initTheme();
 initLang();
 initViewport();
 initHero();
 initScroll();
+initRouteFlush();
 
 let running = true, rafId = 0;
 function loop() {
