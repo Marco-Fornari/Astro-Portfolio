@@ -90,15 +90,7 @@
    BASE
    ============================================================ */
 *{box-sizing:border-box;margin:0;padding:0}
-html{
-  scroll-behavior:smooth;
-  /* full-page scroll: il viewport aggancia l'inizio di ogni sezione */
-  scroll-snap-type:y mandatory;
-}
-/* su mobile lo snap resta ma è permissivo: scroll touch naturale */
-@media (max-width:699px){
-  html{scroll-snap-type:y proximity}
-}
+html{scroll-behavior:smooth}
 body{
   background:var(--bg);
   transition:background .5s,color .5s;
@@ -119,7 +111,6 @@ body::before{
     radial-gradient(1200px 700px at 70% 30%, hsl(var(--primary) / .05), transparent 60%),
     radial-gradient(900px 900px at 15% 85%, hsl(var(--secondary) / .18), transparent 60%);
 }
-canvas#system{position:fixed;inset:0;z-index:1;display:block;pointer-events:none}
 :focus-visible{outline:2px solid hsl(var(--ring));outline-offset:3px}
 .mono{font-family:var(--mono)}
 
@@ -201,8 +192,6 @@ section{
   /* ogni capitolo occupa almeno una pagina intera (svh = viewport reale su mobile) */
   min-height:100vh;
   min-height:100svh;
-  scroll-snap-align:start;
-  scroll-snap-stop:always;  /* un gesto = una pagina, niente salti multipli */
 }
 .sheet{max-width:1280px;margin:0 auto}
 .kicker{
@@ -215,13 +204,6 @@ h2{font-size:clamp(32px,5vw,72px)}
 h3{font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:.26em;color:var(--ink-dim);text-transform:uppercase;margin-bottom:18px}
 .lede{color:var(--ink-dim);max-width:46ch;font-size:clamp(15px,1.25vw,17px)}
 .rule{height:1px;background:var(--line);margin:clamp(48px,9vh,96px) 0}
-/* thin editorial divider between chapters */
-.chapter-gap{
-  display:flex;align-items:center;gap:16px;max-width:1280px;
-  margin:0 auto;padding:0 var(--pad);
-  font-family:var(--mono);font-size:9.5px;letter-spacing:.3em;color:var(--ink-faint);
-}
-.chapter-gap::before,.chapter-gap::after{content:"";flex:1;height:1px;background:var(--line)}
 
 /* ============================================================
    HERO — pinned cinematic opening
@@ -267,14 +249,6 @@ h3{font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:.26em;c
   letter-spacing:.42em;color:var(--ink-dim);text-transform:uppercase;
   text-shadow:0 1px 16px rgba(0,0,0,.6);
   opacity:0;animation:heroLine .9s .38s cubic-bezier(.22,.61,.36,1) forwards;
-}
-/* punto di aggancio a fine reveal: senza questo, lo snap "mandatory"
-   non avrebbe posizioni valide tra il 48% dell'hero (190vh) e About,
-   e rimbalzerebbe in cima mentre si attraversa la parte finale */
-.hero-snap{
-  position:absolute;left:0;bottom:0;width:1px;height:100vh;
-  scroll-snap-align:start;scroll-snap-stop:always;
-  pointer-events:none;visibility:hidden;
 }
 /* subtle darkening as the hero cedes to the flow */
 .hero-veil{position:absolute;inset:0;z-index:3;background:var(--bg);opacity:0;pointer-events:none}
@@ -427,6 +401,6 @@ footer{
    REDUCED MOTION
    ============================================================ */
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto;scroll-snap-type:y proximity}
+  html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
 }

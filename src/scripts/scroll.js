@@ -2,15 +2,11 @@
    SCROLL NARRATIVE — active chapter, progress, scroll button
    ========================================================= */
 import { reduceMotion, routes } from "./state.js";
-import { buildScene, setSceneRoute } from "./system-canvas.js";
 
 let current = "home";
-let lastY = scrollY, scrollDir = 1;
 const progressEl = document.getElementById("progress");
 
 addEventListener("scroll", () => {
-  scrollDir = scrollY > lastY ? 1 : -1;
-  lastY = scrollY;
   const max = document.documentElement.scrollHeight - innerHeight;
   if (progressEl) progressEl.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + "%";
 }, { passive: true });
@@ -25,8 +21,6 @@ function activate(route) {
   if (route === current) return;
   current = route;
   setNav(route);
-  setSceneRoute(route);
-  buildScene(route, reduceMotion ? 0 : scrollDir);
   try { history.replaceState(null, "", "#" + route); } catch (e) {}
 }
 
