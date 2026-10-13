@@ -50,7 +50,7 @@ function numOf(route) {
    i18n.js), altrimenti "00 / HOME" ricavato dal link di menu */
 function labelOf(route) {
   const sec = document.getElementById(route);
-  const k = sec && sec.querySelector(".kicker");
+  const k = sec && sec.querySelector(".band-label");
   if (k && k.textContent.trim()) return k.textContent.replace(/\s+/g, " ").trim();
   const a = document.querySelector(`nav a[data-route="${route}"]`);
   return `${numOf(route)} / ${(a ? a.textContent : route).toUpperCase()}`;

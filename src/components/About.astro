@@ -1,50 +1,54 @@
 ---
-// About — system profile
+// About — profile, trajectory and focus as timetable rows
 ---
-<section id="about" aria-label="About Marco Fornari">
+<section id="about" class="poster" aria-label="About Marco Fornari">
+  <div class="band"><p class="band-label" data-i18n="about.kicker">01 / ABOUT</p></div>
   <div class="sheet">
-    <div class="split">
-      <div class="stick">
-        <p class="kicker rv" data-i18n="about.kicker">01 / ABOUT — SYSTEM PROFILE</p>
-        <h2 class="rv d1">Marco<br>Fornari</h2>
-        <p class="lede rv d2" style="margin-top:24px" data-i18n="about.lede">I monitor, analyse, correlate.<br>I build tools to understand where systems fail.</p>
-        <div class="block rv d3" style="margin-top:44px">
-          <h3>Trajectory</h3>
-          <p class="traj">
-            2022–24 &nbsp;STORYTELLING · AUDIOVISUAL<br>
-            2025–26 &nbsp;WEB &amp; SOFTWARE DEVELOPMENT<br>
-            2026&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>SECURITY OPERATIONS &amp; ENGINEERING</b>
-          </p>
-        </div>
-      </div>
-      <div class="copy">
-        <div class="block rv">
-          <h3>Profile</h3>
+    <div class="intro">
+      <h2 class="name">Marco<br>Fornari</h2>
+      <p class="lede" data-i18n="about.lede">I monitor, analyse, correlate.<br>I build tools to understand where systems fail.</p>
+    </div>
+
+    <div class="rows">
+      <div class="row">
+        <h3 data-i18n="about.profile">Profile</h3>
+        <div class="prose">
           <p data-i18n="about.p1">Hi, I'm Marco: <strong>Junior SOC Analyst</strong> and developer, focused on security operations and system engineering. I have hands-on experience in email threat detection, log analysis and threat intelligence on containerized Linux environments.</p>
           <p data-i18n="about.p2">I designed an anti-phishing and Business Email Compromise platform for SMBs, with header and URL analysis, IoC extraction and correlation across 5 threat intelligence feeds. The resulting <strong>risk scoring</strong> supports event triage and escalation, with rate limiting, caching and fallback for service continuity.</p>
           <p data-i18n="about.p3">Training in Cybersecurity, Cyber Risk &amp; Data Protection (Università Politecnica delle Marche, Google Cybersecurity Certificate). ITS diploma in Industrial Software Development with <strong>110/110 cum laude</strong>, CEH in preparation.</p>
           <p data-i18n="about.p4">I have a degree in Arts and Performance Studies and years of audiovisual production behind me: this gives me clear technical communication, critical thinking and independent project ownership.</p>
         </div>
-        <div class="block rv">
-          <h3>Current stack</h3>
-          <div class="taglist">
-            <span class="tag">C#</span><span class="tag">.NET 10</span><span class="tag">ASP.NET CORE</span>
-            <span class="tag">JAVASCRIPT</span><span class="tag">SQL</span><span class="tag">POSTGRESQL</span>
-            <span class="tag">DOCKER</span><span class="tag">LINUX</span><span class="tag">GIT</span>
-          </div>
-        </div>
-        <div class="block rv">
-          <h3>Security focus</h3>
-          <div class="taglist">
-            <span class="tag hot">PHISHING &amp; BEC DETECTION</span>
-            <span class="tag hot">THREAT INTELLIGENCE</span>
-            <span class="tag hot">IOC CORRELATION</span>
-            <span class="tag hot">RISK SCORING</span>
-            <span class="tag hot">DLP</span>
-            <span class="tag hot">DATA PROTECTION</span>
-            <span class="tag hot">APPLICATION SECURITY</span>
-          </div>
-        </div>
+      </div>
+
+      <div class="row">
+        <h3 data-i18n="about.traj">Trajectory</h3>
+        <ol class="traj">
+          <li><span class="t">2022–24</span><span data-i18n="about.traj1">STORYTELLING · AUDIOVISUAL</span></li>
+          <li><span class="t">2025–26</span><span data-i18n="about.traj2">WEB &amp; SOFTWARE DEVELOPMENT</span></li>
+          <li class="now"><span class="t">2026</span><span data-i18n="about.traj3">SECURITY OPERATIONS &amp; ENGINEERING</span></li>
+        </ol>
+      </div>
+
+      <div class="row">
+        <h3 data-i18n="about.stack">Current stack</h3>
+        <ul class="run">
+          <li>C#</li><li>.NET 10</li><li>ASP.NET Core</li>
+          <li>JavaScript</li><li>SQL</li><li>PostgreSQL</li>
+          <li>Docker</li><li>Linux</li><li>Git</li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <h3 data-i18n="about.secfocus">Security focus</h3>
+        <ul class="run strong">
+          <li>Phishing &amp; BEC detection</li>
+          <li>Threat intelligence</li>
+          <li>IoC correlation</li>
+          <li>Risk scoring</li>
+          <li>DLP</li>
+          <li>Data protection</li>
+          <li>Application security</li>
+        </ul>
       </div>
     </div>
   </div>

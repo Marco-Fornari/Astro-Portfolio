@@ -1,121 +1,115 @@
 ---
-// Experience, education & skills
+// Experience, education & skills — departures board
 ---
-<section id="experience" aria-label="Experience, education and skills">
+<section id="experience" class="poster" aria-label="Experience, education and skills">
+  <div class="band"><p class="band-label" data-i18n="xp.kicker">02 / EXPERIENCE — SYSTEM HISTORY</p></div>
   <div class="sheet">
-    <div class="split">
-      <div class="stick">
-        <p class="kicker rv" data-i18n="xp.kicker">02 / EXPERIENCE — SYSTEM HISTORY</p>
-        <h2 class="rv d1">Story →<br>Code →<br>System →<br>Security</h2>
-      </div>
-      <div class="xp" style="margin-top:10px">
-        <article class="job hot rv">
-          <p class="when" data-i18n="xp.j1.when">FEB 2026 — JUL 2026</p>
+    <h2 class="stops">
+      <span>Story</span><span>Code</span><span>System</span><span>Security</span>
+    </h2>
+
+    <div class="rows">
+      <article class="row job now">
+        <p class="when" data-i18n="xp.j1.when">FEB 2026 — JUL 2026</p>
+        <div class="body">
           <h4 data-i18n="xp.j1.role">Junior Developer · Security Engineering</h4>
-          <p class="org">OVERSIDE SRL</p>
+          <p class="org">Overside Srl</p>
           <p data-i18n="xp.j1.desc">Development of Overguard, an email security platform against phishing and Business Email Compromise for SMBs: automated analysis of SMTP headers, sender, domain and URLs with IoC extraction and correlation; multi-signal risk scoring across 5 threat intelligence feeds to support event triage and escalation; rate limiting, verdict caching and source fallback for detection continuity, plus a semantic DLP module on outbound content. Backend in .NET 10 Clean Architecture, PostgreSQL, JWT-secured REST APIs, Docker deployment on Linux; Chrome MV3 and Thunderbird MV2 extensions integrated with the backend.</p>
-          <div class="taglist">
-            <span class="tag">C#</span><span class="tag">.NET 10</span><span class="tag">ASP.NET CORE</span>
-            <span class="tag">POSTGRESQL</span><span class="tag">REST API</span><span class="tag">JWT</span>
-            <span class="tag">DOCKER</span><span class="tag">LINUX</span><span class="tag">GIT</span>
-          </div>
-          <div class="taglist">
-            <span class="tag hot">PHISHING &amp; BEC DETECTION</span><span class="tag hot">EMAIL ANALYSIS</span>
-            <span class="tag hot">IOC</span><span class="tag hot">RISK SCORING</span><span class="tag hot">DLP</span>
-            <span class="tag hot">VIRUSTOTAL</span><span class="tag hot">GOOGLE SAFE BROWSING</span>
-            <span class="tag hot">URLSCAN.IO</span><span class="tag hot">HYBRID ANALYSIS</span>
-            <span class="tag hot">ALIENVAULT OTX</span>
-          </div>
-        </article>
-        <article class="job rv">
-          <p class="when" data-i18n="xp.j2.when">APR 2025 — JAN 2026</p>
+          <p class="run-label" data-i18n="xp.stack">Stack</p>
+          <ul class="run">
+            <li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>PostgreSQL</li><li>REST API</li>
+            <li>JWT</li><li>Docker</li><li>Linux</li><li>Git</li>
+          </ul>
+          <p class="run-label" data-i18n="xp.detect">Detection &amp; feeds</p>
+          <ul class="run strong">
+            <li>Phishing &amp; BEC detection</li><li>Email analysis</li><li>IoC</li><li>Risk scoring</li>
+            <li>DLP</li><li>VirusTotal</li><li>Google Safe Browsing</li><li>urlscan.io</li>
+            <li>Hybrid Analysis</li><li>AlienVault OTX</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row job">
+        <p class="when" data-i18n="xp.j2.when">APR 2025 — JAN 2026</p>
+        <div class="body">
           <h4 data-i18n="xp.j2.role">Junior Developer</h4>
-          <p class="org">LEVANTE YACHTS SRL</p>
+          <p class="org">Levante Yachts Srl</p>
           <p data-i18n="xp.j2.desc">Automation of portal content publishing via REST APIs (WordPress, Google Sheets); MySQL database management with SQL queries for data verification and cleanup; frontend and backend development (HTML, CSS, JavaScript, PHP).</p>
-          <div class="taglist">
-            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JAVASCRIPT</span>
-            <span class="tag">PHP</span><span class="tag">MYSQL</span><span class="tag">WORDPRESS APIS</span>
-            <span class="tag">GOOGLE SHEETS APIS</span>
-          </div>
-        </article>
+          <ul class="run">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li>
+            <li>WordPress APIs</li><li>Google Sheets APIs</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="sub-title" data-i18n="edu.title">Education &amp; Certifications</h3>
+    <div class="rows">
+      <article class="row edu">
+        <p class="when" data-i18n="edu.e4.when">IN PROGRESS — 2026</p>
+        <div class="body">
+          <h4>CEH — Certified Ethical Hacker</h4>
+          <p class="org">EC-Council</p>
+          <p data-i18n="edu.e4.desc">Ethical hacking, penetration testing, vulnerability assessment, attack techniques, security controls.</p>
+        </div>
+      </article>
+      <article class="row edu">
+        <p class="when">2024 — 2026</p>
+        <div class="body">
+          <h4>ITS Smart Academy</h4>
+          <p class="org" data-i18n="edu.e1.sub">INDUSTRIAL SOFTWARE DEVELOPER<br>EQF LEVEL 5 · 110/110 CUM LAUDE</p>
+          <p data-i18n="edu.e1.desc">Two-year higher technical program in industrial software development.</p>
+        </div>
+      </article>
+      <article class="row edu">
+        <p class="when">2024</p>
+        <div class="body">
+          <h4>Università Politecnica delle Marche</h4>
+          <p class="org">Cyber Risk &amp; Data Protection</p>
+          <p data-i18n="edu.e2.desc">Cybersecurity, data protection, GDPR, software security, information security, cyber risk management.</p>
+        </div>
+      </article>
+      <article class="row edu">
+        <p class="when">2024</p>
+        <div class="body">
+          <h4>Google Cybersecurity Certificate</h4>
+          <p class="org">Foundations &amp; Operations</p>
+          <p data-i18n="edu.e3.desc">Python, Linux, SQL, SIEM, IDS, risk assessment, threat identification, security controls.</p>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="sub-title" data-i18n="skills.title">Skills</h3>
+    <div class="rows skills">
+      <div class="row" role="group" aria-labelledby="sk-dev">
+        <h4 id="sk-dev" data-i18n="skills.dev">Development</h4>
+        <ul class="run">
+          <li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>Entity Framework</li><li>JavaScript</li>
+          <li>PHP</li><li>Flutter</li><li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>Git</li>
+        </ul>
       </div>
-    </div>
-
-    <div class="rule"></div>
-
-    <h3 class="rv" data-i18n="edu.title">Education &amp; Certifications</h3>
-    <div class="edu rv d1">
-      <article>
-        <p class="mono-h" data-i18n="edu.e4.when">IN PROGRESS — 2026</p>
-        <h5>CEH — Certified Ethical Hacker</h5>
-        <p class="sub">EC-COUNCIL</p>
-        <p data-i18n="edu.e4.desc">Ethical hacking, penetration testing, vulnerability assessment, attack techniques, security controls.</p>
-      </article>
-      <article>
-        <p class="mono-h">2024 — 2026</p>
-        <h5>ITS Smart Academy</h5>
-        <p class="sub" data-i18n="edu.e1.sub">INDUSTRIAL SOFTWARE DEVELOPER<br>EQF LEVEL 5 · 110/110 CUM LAUDE</p>
-        <p data-i18n="edu.e1.desc">Two-year higher technical program in industrial software development.</p>
-      </article>
-      <article>
-        <p class="mono-h">2024</p>
-        <h5>Università Politecnica delle Marche</h5>
-        <p class="sub">CYBER RISK &amp; DATA PROTECTION</p>
-        <p data-i18n="edu.e2.desc">Cybersecurity, data protection, GDPR, software security, information security, cyber risk management.</p>
-      </article>
-      <article>
-        <p class="mono-h">2024</p>
-        <h5>Google Cybersecurity Certificate</h5>
-        <p class="sub">FOUNDATIONS &amp; OPERATIONS</p>
-        <p data-i18n="edu.e3.desc">Python, Linux, SQL, SIEM, IDS, risk assessment, threat identification, security controls.</p>
-      </article>
-    </div>
-
-    <div class="rule"></div>
-
-    <h3 class="rv" data-i18n="skills.title">Skills</h3>
-    <div class="skills rv d1">
-      <article>
-        <p class="mono-h">01</p>
-        <h4 data-i18n="skills.dev">Development</h4>
-        <div class="taglist">
-          <span class="tag">C#</span><span class="tag">.NET 10</span><span class="tag">ASP.NET CORE</span>
-          <span class="tag">ENTITY FRAMEWORK</span><span class="tag">JAVASCRIPT</span><span class="tag">PHP</span>
-          <span class="tag">FLUTTER</span><span class="tag">SQL</span><span class="tag">POSTGRESQL</span>
-          <span class="tag">MYSQL</span><span class="tag">GIT</span>
-        </div>
-      </article>
-      <article>
-        <p class="mono-h">02</p>
-        <h4 data-i18n="skills.cyber">Cybersecurity</h4>
-        <div class="taglist">
-          <span class="tag hot">PHISHING &amp; BEC DETECTION</span><span class="tag hot">EMAIL SECURITY</span>
-          <span class="tag hot">THREAT INTELLIGENCE</span><span class="tag hot">IOC CORRELATION</span>
-          <span class="tag hot">RISK SCORING</span><span class="tag hot">LOG ANALYSIS</span>
-          <span class="tag hot">CYBER RISK</span><span class="tag hot">RISK MANAGEMENT</span>
-          <span class="tag hot">DATA PROTECTION</span><span class="tag hot">DLP</span>
-          <span class="tag hot">APPLICATION SECURITY</span>
-        </div>
-      </article>
-      <article>
-        <p class="mono-h">03</p>
-        <h4 data-i18n="skills.tools">Tools &amp; Infrastructure</h4>
-        <div class="taglist">
-          <span class="tag">LINUX</span><span class="tag">BASH</span><span class="tag">DOCKER</span>
-          <span class="tag">REST APIS</span><span class="tag">JWT</span>
-          <span class="tag">SEMGREP</span><span class="tag">NPM AUDIT</span>
-        </div>
-      </article>
-      <article>
-        <p class="mono-h">04</p>
-        <h4 data-i18n="skills.human">Human skills</h4>
-        <div class="taglist">
-          <span class="tag">CRITICAL THINKING</span><span class="tag">ANALYTICAL THINKING</span>
-          <span class="tag">TECHNICAL COMMUNICATION</span><span class="tag">PROBLEM SOLVING</span>
-          <span class="tag">CLIENT COMMUNICATION</span><span class="tag">ADAPTABILITY</span>
-          <span class="tag">ATTENTION TO DETAIL</span><span class="tag">PROJECT MANAGEMENT</span>
-        </div>
-      </article>
+      <div class="row" role="group" aria-labelledby="sk-cyber">
+        <h4 id="sk-cyber" data-i18n="skills.cyber">Cybersecurity</h4>
+        <ul class="run strong">
+          <li>Phishing &amp; BEC detection</li><li>Email security</li><li>Threat intelligence</li>
+          <li>IoC correlation</li><li>Risk scoring</li><li>Log analysis</li><li>Cyber risk</li>
+          <li>Risk management</li><li>Data protection</li><li>DLP</li><li>Application security</li>
+        </ul>
+      </div>
+      <div class="row" role="group" aria-labelledby="sk-tools">
+        <h4 id="sk-tools" data-i18n="skills.tools">Tools &amp; Infrastructure</h4>
+        <ul class="run">
+          <li>Linux</li><li>Bash</li><li>Docker</li><li>REST APIs</li><li>JWT</li><li>Semgrep</li><li>npm audit</li>
+        </ul>
+      </div>
+      <div class="row" role="group" aria-labelledby="sk-human">
+        <h4 id="sk-human" data-i18n="skills.human">Human skills</h4>
+        <ul class="run">
+          <li>Critical thinking</li><li>Analytical thinking</li><li>Technical communication</li>
+          <li>Problem solving</li><li>Client communication</li><li>Adaptability</li>
+          <li>Attention to detail</li><li>Project management</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
