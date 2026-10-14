@@ -16,10 +16,7 @@ export const I18N = {
       "Ciao, sono Marco: <strong>developer junior</strong> con una passione per reti, sistemi e sicurezza informatica.",
     "about.p2":
       "Mi sono diplomato all'ITS in Industrial Software Development con 110 e lode. Nel 2026 ho sviluppato Overguard, una piattaforma anti-phishing per PMI: il primo progetto in cui ho unito sviluppo e sicurezza.",
-    "about.p3":
-      "Prima del codice ci sono stati una laurea in Arti e Scienze dello Spettacolo e qualche anno da videomaker e fotografo freelance. Mi hanno insegnato a gestire un progetto in autonomia e a spiegare le cose in modo semplice.",
     "about.traj": "Percorso",
-    "about.traj1": "VIDEOMAKER E FOTOGRAFO FREELANCE",
     "about.traj2": "CYBERSECURITY · UNIVPM E GOOGLE",
     "about.traj3": "ITS · PRIME ESPERIENZE DA DEVELOPER",
     "about.trajNow": "OGGI",
@@ -55,11 +52,6 @@ export const I18N = {
       "<li>Sviluppo di pagine e funzionalità in HTML, CSS, JavaScript e PHP.</li>",
     "xp.j2.learn":
       "A lavorare su un sistema già in uso, dove ogni modifica tocca dati e contenuti reali.",
-
-    "xp.j3.when": "GEN 2022 — SET 2024",
-    "xp.j3.role": "Videomaker e fotografo",
-    "xp.j3.desc":
-      "Gestivo ogni progetto in autonomia: richieste del cliente, pianificazione, riprese e consegna nei tempi concordati.",
 
     /* PROJECTS */
     "proj.title": "Progetti",
@@ -99,9 +91,8 @@ export const I18N = {
 
     /* CONTACT */
     "contact.kicker": "03 / CONTATTI",
-    "contact.headline": "Hai una posizione junior?<br><em>Parliamone.</em>",
-    "contact.note":
-      "Sono aperto a posizioni junior come sviluppatore, sistemista o nella cybersecurity. Scrivimi per un colloquio o anche solo per una domanda: rispondo volentieri.",
+    "contact.headline":
+      "La sicurezza è un processo<br><em> non un prodotto.</em>",
     "contact.cv": "Scarica il CV",
   },
   en: {
@@ -116,10 +107,7 @@ export const I18N = {
       "Hi, I'm Marco: a <strong>junior developer</strong> with a passion for networks, systems and cybersecurity.",
     "about.p2":
       "I graduated from ITS in Industrial Software Development with 110/110 cum laude. In 2026 I built Overguard, an anti-phishing platform for small businesses: the first project where I brought development and security together.",
-    "about.p3":
-      "Before code, I earned a degree in Arts and Performance Studies and spent a few years as a freelance videographer and photographer. That taught me to run projects on my own and to explain things simply.",
     "about.traj": "Path",
-    "about.traj1": "FREELANCE VIDEO &amp; PHOTO",
     "about.traj2": "CYBERSECURITY · UNIVPM &amp; GOOGLE",
     "about.traj3": "ITS · FIRST DEVELOPER ROLES",
     "about.trajNow": "NOW",
@@ -155,11 +143,6 @@ export const I18N = {
       "<li>Built pages and features in HTML, CSS, JavaScript and PHP.</li>",
     "xp.j2.learn":
       "How to work on a live system, where every change touches real data and content.",
-
-    "xp.j3.when": "JAN 2022 — SEP 2024",
-    "xp.j3.role": "Videographer &amp; photographer",
-    "xp.j3.desc":
-      "I ran each project on my own: client brief, planning, shooting and on-time delivery.",
 
     /* PROJECTS */
     "proj.title": "Projects",
@@ -199,9 +182,7 @@ export const I18N = {
 
     /* CONTACT */
     "contact.kicker": "03 / CONTACT",
-    "contact.headline": "Got a junior role open?<br><em>Let's talk.</em>",
-    "contact.note":
-      "I'm open to junior roles in development, systems administration or cybersecurity. Write to me about an interview or just a question: I'm happy to reply.",
+    "contact.headline": "Security is a process<br><em> not a product.</em>",
     "contact.cv": "Download CV",
   },
 };
