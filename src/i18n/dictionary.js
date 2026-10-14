@@ -6,109 +6,202 @@ export const I18N = {
   it: {
     "hero.title":
       "<span>DIFENDI</span><span>ANALIZZA</span><span>PROTEGGI</span>",
-    "hero.role": "Cybersecurity",
+    "hero.role": "Developer<br>Reti · Sistemi · Sicurezza",
+
+    /* ABOUT */
     "about.kicker": "01 / CHI SONO",
-    "about.lede":
-      "Monitoro, analizzo, correlo.<br>Costruisco strumenti per capire dove i sistemi cedono.",
+    "about.lede": "Sviluppo software<br>e studio come difendere reti e sistemi.",
     "about.profile": "Profilo",
     "about.p1":
-      "Ciao, sono Marco: <strong>Junior SOC Analyst</strong> e developer, orientato a security operations e system engineering. Ho esperienza pratica in detection di minacce email, analisi di log e threat intelligence su ambienti Linux containerizzati.",
+      "Ciao, sono Marco: <strong>developer junior</strong> con una passione per reti, sistemi e sicurezza informatica.",
     "about.p2":
-      "Ho progettato una piattaforma anti-phishing e Business Email Compromise per PMI, con analisi di header e URL, estrazione degli IoC e correlazione su 5 feed di threat intelligence. Il <strong>risk scoring</strong> risultante supporta il triage e l'escalation degli eventi, con rate limiting, caching e fallback per la continuità del servizio.",
+      "Mi sono diplomato all'ITS in Industrial Software Development con 110 e lode. Nel 2026 ho sviluppato Overguard, una piattaforma anti-phishing per PMI: il primo progetto in cui ho unito sviluppo e sicurezza.",
     "about.p3":
-      "Formazione in Cybersecurity, Cyber Risk e Data Protection (Università Politecnica delle Marche, Google Cybersecurity Certificate). Diploma ITS in Industrial Software Development con <strong>110/110 e lode</strong>, CEH in preparazione.",
-    "about.p4":
-      "Ho una laurea in Arti e Scienze dello Spettacolo e anni di produzione audiovisiva alle spalle: questo mi dà comunicazione tecnica chiara, pensiero critico e autonomia nella gestione dei progetti.",
-    "xp.stack": "Stack",
-    "xp.detect": "Rilevamento &amp; feed",
+      "Prima del codice ci sono stati una laurea in Arti e Scienze dello Spettacolo e qualche anno da videomaker e fotografo freelance. Mi hanno insegnato a gestire un progetto in autonomia e a spiegare le cose in modo semplice.",
     "about.traj": "Percorso",
-    "about.traj1": "STORYTELLING · AUDIOVISIVO",
-    "about.traj2": "SVILUPPO WEB E SOFTWARE",
-    "about.traj3": "SECURITY OPERATIONS &amp; ENGINEERING",
-    "about.stack": "Stack attuale",
-    "about.secfocus": "Focus sicurezza",
+    "about.traj1": "VIDEOMAKER E FOTOGRAFO FREELANCE",
+    "about.traj2": "CYBERSECURITY · UNIVPM E GOOGLE",
+    "about.traj3": "ITS · PRIME ESPERIENZE DA DEVELOPER",
+    "about.trajNow": "OGGI",
+    "about.traj4": "SVILUPPO → RETI, SISTEMI E SICUREZZA",
+    "about.goal": "Cosa cerco",
+    "about.goalText":
+      "Oggi sono sviluppatore. Voglio crescere verso un ruolo da <strong>sistemista di rete</strong> o <strong>cybersecurity analyst</strong>, in un team dove le mie basi da developer siano utili e dove possa imparare sul campo. Nel frattempo preparo la certificazione CEH.",
+
+    /* EXPERIENCE */
     "xp.kicker": "02 / ESPERIENZA — STORIA DI SISTEMA",
-    "xp.j1.role": "Junior Developer · Security Engineering",
-    "xp.j2.role": "Junior Developer",
+    "xp.did": "Cosa ho fatto",
+    "xp.learned": "Cosa ho imparato",
+    "xp.stack": "Stack",
+
     "xp.j1.when": "FEB 2026 — LUG 2026",
+    "xp.j1.role": "Junior Developer · Security Engineering",
     "xp.j1.desc":
-      "Sviluppo di Overguard, piattaforma di email security anti-phishing e Business Email Compromise per PMI: analisi automatizzata di header SMTP, mittente, dominio e URL con estrazione e correlazione degli IoC; risk scoring multi-segnale su 5 feed di threat intelligence a supporto del triage e dell'escalation degli eventi; rate limiting per provider, caching dei verdetti e fallback tra le fonti per la continuità della detection, con modulo DLP semantico sui contenuti in uscita. Backend .NET 10 in Clean Architecture, PostgreSQL, API REST con autenticazione JWT e deployment Docker su Linux; estensioni Chrome MV3 e Thunderbird MV2 integrate con il backend.",
+      "Ho sviluppato Overguard, una piattaforma che aiuta le PMI a riconoscere email di phishing e tentativi di frode (Business Email Compromise). È stato anche il mio progetto di tesi ITS.",
+    "xp.j1.points":
+      "<li>Analisi automatica di header, mittente, dominio e link delle email, con estrazione degli indicatori di compromissione (IoC).</li>" +
+      "<li>Punteggio di rischio basato su 5 fonti di threat intelligence (VirusTotal, AlienVault OTX, URLScan.io, Hybrid Analysis, Google Safe Browsing), con cache e fallback quando una fonte non risponde.</li>" +
+      "<li>Modulo DLP che controlla i contenuti sensibili nelle email in uscita.</li>" +
+      "<li>Backend .NET 10 con API REST protette da JWT, PostgreSQL e deploy Docker su Linux; estensioni per Chrome e Thunderbird collegate al backend.</li>",
+    "xp.j1.learn":
+      "A progettare un sistema completo, dal database alle estensioni del browser, e a chiedermi da subito cosa può andare storto: una fonte che smette di rispondere, un limite di chiamate API superato, un dato che esce quando non dovrebbe.",
+
     "xp.j2.when": "APR 2025 — GEN 2026",
-    "xp.j2.desc":
-      "Automazione della pubblicazione dei contenuti del portale via API REST (WordPress, Google Sheets); gestione del database MySQL con query SQL per verifica e bonifica dei dati; sviluppo frontend/backend (HTML, CSS, JavaScript, PHP).",
-    "edu.e4.when": "IN CORSO — 2026",
+    "xp.j2.role": "Junior Developer",
+    "xp.j2.desc": "Ho lavorato sul portale aziendale, sia lato frontend che backend.",
+    "xp.j2.points":
+      "<li>Pubblicazione dei contenuti automatizzata collegando WordPress e Google Sheets tramite API REST.</li>" +
+      "<li>Gestione del database MySQL, con query SQL per verificare e ripulire i dati.</li>" +
+      "<li>Sviluppo di pagine e funzionalità in HTML, CSS, JavaScript e PHP.</li>",
+    "xp.j2.learn":
+      "A lavorare su un sistema già in uso, dove ogni modifica tocca dati e contenuti reali.",
+
+    "xp.j3.when": "GEN 2022 — SET 2024",
+    "xp.j3.role": "Videomaker e fotografo",
+    "xp.j3.desc":
+      "Gestivo ogni progetto in autonomia: richieste del cliente, pianificazione, riprese e consegna nei tempi concordati.",
+
+    /* PROJECTS */
+    "proj.title": "Progetti",
+    "proj.p1.title": "Questo portfolio",
+    "proj.p1.desc":
+      "Il sito che stai leggendo: l'ho costruito partendo dalla sicurezza, non aggiungendola alla fine.",
+    "proj.p1.points":
+      "<li>Sito statico, per ridurre al minimo la superficie d'attacco.</li>" +
+      "<li>Header di sicurezza HTTP (CSP, HSTS, Permissions-Policy) con valutazione A+ su securityheaders.com.</li>" +
+      "<li>Analisi del codice con Semgrep e regole personalizzate, controllo delle dipendenze con npm audit.</li>",
+    "proj.p1.learn":
+      "A mettere in pratica su un progetto mio quello che avevo studiato: hardening, analisi statica e triage dei risultati.",
+
+    /* EDUCATION */
     "edu.title": "Formazione &amp; Certificazioni",
+    "edu.e4.when": "IN CORSO — 2026",
+    "edu.e4.desc":
+      "Preparazione in corso: ethical hacking, vulnerabilità, sicurezza di reti e sistemi.",
     "edu.e1.sub":
       "INDUSTRIAL SOFTWARE DEVELOPER<br>EQF LIVELLO 5 · 110/110 E LODE",
     "edu.e1.desc":
       "Percorso tecnico superiore biennale in sviluppo software industriale.",
     "edu.e2.desc":
-      "Cybersecurity, protezione dei dati, GDPR, sicurezza del software, sicurezza delle informazioni, gestione del cyber risk.",
+      "Corso di perfezionamento (25 CFU): GDPR, gestione del rischio, sicurezza di reti e software.",
     "edu.e3.desc":
       "Python, Linux, SQL, SIEM, IDS, risk assessment, identificazione delle minacce, controlli di sicurezza.",
-    "edu.e4.desc":
-      "Ethical hacking, penetration testing, vulnerability assessment, tecniche di attacco, controlli di sicurezza.",
+
+    /* SKILLS */
     "skills.title": "Competenze",
     "skills.dev": "Sviluppo",
     "skills.cyber": "Cybersecurity",
     "skills.tools": "Strumenti &amp; Infrastruttura",
-    "skills.human": "Competenze umane",
+    "skills.human": "Competenze trasversali",
+    "skills.human.list":
+      "<li>Pensiero analitico</li><li>Problem solving</li><li>Attenzione al dettaglio</li>" +
+      "<li>Documentazione tecnica</li><li>Gestione autonoma dei progetti</li><li>Comunicazione chiara</li>",
+
+    /* CONTACT */
     "contact.kicker": "03 / CONTATTI",
-    "contact.headline":
-      "La sicurezza è un processo<br><em> non un prodotto.</em>",
+    "contact.headline": "Hai una posizione junior?<br><em>Parliamone.</em>",
+    "contact.note":
+      "Sono aperto a posizioni junior come sviluppatore, sistemista o nella cybersecurity. Scrivimi per un colloquio o anche solo per una domanda: rispondo volentieri.",
     "contact.cv": "Scarica il CV",
   },
   en: {
     "hero.title": "<span>DEFEND</span><span>ANALYZE</span><span>PROTECT</span>",
-    "hero.role": "Cybersecurity",
+    "hero.role": "Developer<br>Networks · Systems · Security",
+
+    /* ABOUT */
     "about.kicker": "01 / ABOUT",
-    "about.lede":
-      "I monitor, analyse, correlate.<br>I build tools to understand where systems fail.",
+    "about.lede": "I build software<br>and study how to defend networks and systems.",
     "about.profile": "Profile",
     "about.p1":
-      "Hi, I'm Marco: <strong>Junior SOC Analyst</strong> and developer, focused on security operations and system engineering. I have hands-on experience in email threat detection, log analysis and threat intelligence on containerized Linux environments.",
+      "Hi, I'm Marco: a <strong>junior developer</strong> with a passion for networks, systems and cybersecurity.",
     "about.p2":
-      "I designed an anti-phishing and Business Email Compromise platform for SMBs, with header and URL analysis, IoC extraction and correlation across 5 threat intelligence feeds. The resulting <strong>risk scoring</strong> supports event triage and escalation, with rate limiting, caching and fallback for service continuity.",
+      "I graduated from ITS in Industrial Software Development with 110/110 cum laude. In 2026 I built Overguard, an anti-phishing platform for small businesses: the first project where I brought development and security together.",
     "about.p3":
-      "Training in Cybersecurity, Cyber Risk &amp; Data Protection (Università Politecnica delle Marche, Google Cybersecurity Certificate). ITS diploma in Industrial Software Development with <strong>110/110 cum laude</strong>, CEH in preparation.",
-    "about.p4":
-      "I have a degree in Arts and Performance Studies and years of audiovisual production behind me: this gives me clear technical communication, critical thinking and independent project ownership.",
-    "xp.stack": "Stack",
-    "xp.detect": "Detection &amp; feeds",
-    "about.traj": "Trajectory",
-    "about.traj1": "STORYTELLING · AUDIOVISUAL",
-    "about.traj2": "WEB &amp; SOFTWARE DEVELOPMENT",
-    "about.traj3": "SECURITY OPERATIONS &amp; ENGINEERING",
-    "about.stack": "Current stack",
-    "about.secfocus": "Security focus",
+      "Before code, I earned a degree in Arts and Performance Studies and spent a few years as a freelance videographer and photographer. That taught me to run projects on my own and to explain things simply.",
+    "about.traj": "Path",
+    "about.traj1": "FREELANCE VIDEO &amp; PHOTO",
+    "about.traj2": "CYBERSECURITY · UNIVPM &amp; GOOGLE",
+    "about.traj3": "ITS · FIRST DEVELOPER ROLES",
+    "about.trajNow": "NOW",
+    "about.traj4": "DEVELOPMENT → NETWORKS, SYSTEMS &amp; SECURITY",
+    "about.goal": "Looking for",
+    "about.goalText":
+      "Today I'm a developer. I want to grow towards a <strong>network and systems administrator</strong> or <strong>cybersecurity analyst</strong> role, in a team where my development background helps and I can learn on the job. Meanwhile, I'm preparing for the CEH certification.",
+
+    /* EXPERIENCE */
     "xp.kicker": "02 / EXPERIENCE — SYSTEM HISTORY",
-    "xp.j1.role": "Junior Developer · Security Engineering",
-    "xp.j2.role": "Junior Developer",
+    "xp.did": "What I did",
+    "xp.learned": "What I learned",
+    "xp.stack": "Stack",
+
     "xp.j1.when": "FEB 2026 — JUL 2026",
+    "xp.j1.role": "Junior Developer · Security Engineering",
     "xp.j1.desc":
-      "Development of Overguard, an email security platform against phishing and Business Email Compromise for SMBs: automated analysis of SMTP headers, sender, domain and URLs with IoC extraction and correlation; multi-signal risk scoring across 5 threat intelligence feeds to support event triage and escalation; rate limiting, verdict caching and source fallback for detection continuity, plus a semantic DLP module on outbound content. Backend in .NET 10 Clean Architecture, PostgreSQL, JWT-secured REST APIs, Docker deployment on Linux; Chrome MV3 and Thunderbird MV2 extensions integrated with the backend.",
+      "I built Overguard, a platform that helps small businesses spot phishing emails and Business Email Compromise fraud. It was also my ITS thesis project.",
+    "xp.j1.points":
+      "<li>Automated analysis of email headers, sender, domain and links, with extraction of indicators of compromise (IoCs).</li>" +
+      "<li>Risk scoring across 5 threat intelligence sources (VirusTotal, AlienVault OTX, URLScan.io, Hybrid Analysis, Google Safe Browsing), with caching and fallback when a source doesn't respond.</li>" +
+      "<li>DLP module that checks outgoing emails for sensitive content.</li>" +
+      "<li>.NET 10 backend with JWT-secured REST APIs, PostgreSQL and Docker deployment on Linux; Chrome and Thunderbird extensions connected to the backend.</li>",
+    "xp.j1.learn":
+      "How to design a complete system, from the database to the browser extensions, and to ask early on what can go wrong: a source that stops responding, an API rate limit, data leaving when it shouldn't.",
+
     "xp.j2.when": "APR 2025 — JAN 2026",
-    "xp.j2.desc":
-      "Automation of portal content publishing via REST APIs (WordPress, Google Sheets); MySQL database management with SQL queries for data verification and cleanup; frontend and backend development (HTML, CSS, JavaScript, PHP).",
-    "edu.e4.when": "IN PROGRESS — 2026",
+    "xp.j2.role": "Junior Developer",
+    "xp.j2.desc": "I worked on the company portal, on both frontend and backend.",
+    "xp.j2.points":
+      "<li>Automated content publishing by connecting WordPress and Google Sheets through REST APIs.</li>" +
+      "<li>Managed the MySQL database, writing SQL queries to verify and clean data.</li>" +
+      "<li>Built pages and features in HTML, CSS, JavaScript and PHP.</li>",
+    "xp.j2.learn":
+      "How to work on a live system, where every change touches real data and content.",
+
+    "xp.j3.when": "JAN 2022 — SEP 2024",
+    "xp.j3.role": "Videographer &amp; photographer",
+    "xp.j3.desc":
+      "I ran each project on my own: client brief, planning, shooting and on-time delivery.",
+
+    /* PROJECTS */
+    "proj.title": "Projects",
+    "proj.p1.title": "This portfolio",
+    "proj.p1.desc":
+      "The site you're reading: I built it with security as the starting point, not an add-on.",
+    "proj.p1.points":
+      "<li>Static site, to keep the attack surface as small as possible.</li>" +
+      "<li>HTTP security headers (CSP, HSTS, Permissions-Policy), rated A+ on securityheaders.com.</li>" +
+      "<li>Code scanning with Semgrep and custom rules, dependency checks with npm audit.</li>",
+    "proj.p1.learn":
+      "To apply what I'd studied to a project of my own: hardening, static analysis and triaging the findings.",
+
+    /* EDUCATION */
     "edu.title": "Education &amp; Certifications",
+    "edu.e4.when": "IN PROGRESS — 2026",
+    "edu.e4.desc":
+      "Currently preparing: ethical hacking, vulnerabilities, network and system security.",
     "edu.e1.sub":
       "INDUSTRIAL SOFTWARE DEVELOPER<br>EQF LEVEL 5 · 110/110 CUM LAUDE",
     "edu.e1.desc":
       "Two-year higher technical program in industrial software development.",
     "edu.e2.desc":
-      "Cybersecurity, data protection, GDPR, software security, information security, cyber risk management.",
+      "Postgraduate course (25 ECTS): GDPR, risk management, network and software security.",
     "edu.e3.desc":
       "Python, Linux, SQL, SIEM, IDS, risk assessment, threat identification, security controls.",
-    "edu.e4.desc":
-      "Ethical hacking, penetration testing, vulnerability assessment, attack techniques, security controls.",
+
+    /* SKILLS */
     "skills.title": "Skills",
     "skills.dev": "Development",
     "skills.cyber": "Cybersecurity",
     "skills.tools": "Tools &amp; Infrastructure",
-    "skills.human": "Human skills",
+    "skills.human": "Soft skills",
+    "skills.human.list":
+      "<li>Analytical thinking</li><li>Problem solving</li><li>Attention to detail</li>" +
+      "<li>Technical documentation</li><li>Independent project ownership</li><li>Clear communication</li>",
+
+    /* CONTACT */
     "contact.kicker": "03 / CONTACT",
-    "contact.headline": "Safety is a process<br><em> not a product.</em>",
+    "contact.headline": "Got a junior role open?<br><em>Let's talk.</em>",
+    "contact.note":
+      "I'm open to junior roles in development, systems administration or cybersecurity. Write to me about an interview or just a question: I'm happy to reply.",
     "contact.cv": "Download CV",
   },
 };

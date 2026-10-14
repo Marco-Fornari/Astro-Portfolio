@@ -1,7 +1,7 @@
 ---
-// Experience, education & skills — departures board
+// Experience, projects, education & skills — departures board
 ---
-<section id="experience" class="poster" aria-label="Experience, education and skills">
+<section id="experience" class="poster" aria-label="Experience, projects, education and skills">
   <div class="band"><p class="band-label" data-i18n="xp.kicker">02 / EXPERIENCE — SYSTEM HISTORY</p></div>
   <div class="sheet">
     <h2 class="stops">
@@ -14,17 +14,20 @@
         <div class="body">
           <h4 data-i18n="xp.j1.role">Junior Developer · Security Engineering</h4>
           <p class="org">Overside Srl</p>
-          <p data-i18n="xp.j1.desc">Development of Overguard, an email security platform against phishing and Business Email Compromise for SMBs: automated analysis of SMTP headers, sender, domain and URLs with IoC extraction and correlation; multi-signal risk scoring across 5 threat intelligence feeds to support event triage and escalation; rate limiting, verdict caching and source fallback for detection continuity, plus a semantic DLP module on outbound content. Backend in .NET 10 Clean Architecture, PostgreSQL, JWT-secured REST APIs, Docker deployment on Linux; Chrome MV3 and Thunderbird MV2 extensions integrated with the backend.</p>
+          <p data-i18n="xp.j1.desc">I built Overguard, a platform that helps small businesses spot phishing emails and Business Email Compromise fraud. It was also my ITS thesis project.</p>
+          <p class="run-label" data-i18n="xp.did">What I did</p>
+          <ul class="points" data-i18n="xp.j1.points">
+            <li>Automated analysis of email headers, sender, domain and links, with extraction of indicators of compromise (IoCs).</li>
+            <li>Risk scoring across 5 threat intelligence sources (VirusTotal, AlienVault OTX, URLScan.io, Hybrid Analysis, Google Safe Browsing), with caching and fallback when a source doesn't respond.</li>
+            <li>DLP module that checks outgoing emails for sensitive content.</li>
+            <li>.NET 10 backend with JWT-secured REST APIs, PostgreSQL and Docker deployment on Linux; Chrome and Thunderbird extensions connected to the backend.</li>
+          </ul>
+          <p class="run-label" data-i18n="xp.learned">What I learned</p>
+          <p data-i18n="xp.j1.learn">How to design a complete system, from the database to the browser extensions, and to ask early on what can go wrong: a source that stops responding, an API rate limit, data leaving when it shouldn't.</p>
           <p class="run-label" data-i18n="xp.stack">Stack</p>
           <ul class="run">
             <li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>PostgreSQL</li><li>REST API</li>
             <li>JWT</li><li>Docker</li><li>Linux</li><li>Git</li>
-          </ul>
-          <p class="run-label" data-i18n="xp.detect">Detection &amp; feeds</p>
-          <ul class="run strong">
-            <li>Phishing &amp; BEC detection</li><li>Email analysis</li><li>IoC</li><li>Risk scoring</li>
-            <li>DLP</li><li>VirusTotal</li><li>Google Safe Browsing</li><li>urlscan.io</li>
-            <li>Hybrid Analysis</li><li>AlienVault OTX</li>
           </ul>
         </div>
       </article>
@@ -34,11 +37,49 @@
         <div class="body">
           <h4 data-i18n="xp.j2.role">Junior Developer</h4>
           <p class="org">Levante Yachts Srl</p>
-          <p data-i18n="xp.j2.desc">Automation of portal content publishing via REST APIs (WordPress, Google Sheets); MySQL database management with SQL queries for data verification and cleanup; frontend and backend development (HTML, CSS, JavaScript, PHP).</p>
+          <p data-i18n="xp.j2.desc">I worked on the company portal, on both frontend and backend.</p>
+          <p class="run-label" data-i18n="xp.did">What I did</p>
+          <ul class="points" data-i18n="xp.j2.points">
+            <li>Automated content publishing by connecting WordPress and Google Sheets through REST APIs.</li>
+            <li>Managed the MySQL database, writing SQL queries to verify and clean data.</li>
+            <li>Built pages and features in HTML, CSS, JavaScript and PHP.</li>
+          </ul>
+          <p class="run-label" data-i18n="xp.learned">What I learned</p>
+          <p data-i18n="xp.j2.learn">How to work on a live system, where every change touches real data and content.</p>
+          <p class="run-label" data-i18n="xp.stack">Stack</p>
           <ul class="run">
             <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li>
-            <li>WordPress APIs</li><li>Google Sheets APIs</li>
+            <li>WordPress API</li><li>Google Sheets API</li>
           </ul>
+        </div>
+      </article>
+
+      <article class="row job">
+        <p class="when" data-i18n="xp.j3.when">JAN 2022 — SEP 2024</p>
+        <div class="body">
+          <h4 data-i18n="xp.j3.role">Videographer &amp; photographer</h4>
+          <p class="org">Freelance · Colleferro (RM)</p>
+          <p data-i18n="xp.j3.desc">I ran each project on my own: client brief, planning, shooting and on-time delivery.</p>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="sub-title" data-i18n="proj.title">Projects</h3>
+    <div class="rows">
+      <article class="row job">
+        <p class="when">2026</p>
+        <div class="body">
+          <h4 data-i18n="proj.p1.title">This portfolio</h4>
+          <p class="org">Astro · Netlify</p>
+          <p data-i18n="proj.p1.desc">The site you're reading: I built it with security as the starting point, not an add-on.</p>
+          <p class="run-label" data-i18n="xp.did">What I did</p>
+          <ul class="points" data-i18n="proj.p1.points">
+            <li>Static site, to keep the attack surface as small as possible.</li>
+            <li>HTTP security headers (CSP, HSTS, Permissions-Policy), rated A+ on securityheaders.com.</li>
+            <li>Code scanning with Semgrep and custom rules, dependency checks with npm audit.</li>
+          </ul>
+          <p class="run-label" data-i18n="xp.learned">What I learned</p>
+          <p data-i18n="proj.p1.learn">To apply what I'd studied to a project of my own: hardening, static analysis and triaging the findings.</p>
         </div>
       </article>
     </div>
@@ -50,7 +91,7 @@
         <div class="body">
           <h4>CEH — Certified Ethical Hacker</h4>
           <p class="org">EC-Council</p>
-          <p data-i18n="edu.e4.desc">Ethical hacking, penetration testing, vulnerability assessment, attack techniques, security controls.</p>
+          <p data-i18n="edu.e4.desc">Currently preparing: ethical hacking, vulnerabilities, network and system security.</p>
         </div>
       </article>
       <article class="row edu">
@@ -66,7 +107,7 @@
         <div class="body">
           <h4>Università Politecnica delle Marche</h4>
           <p class="org">Cyber Risk &amp; Data Protection</p>
-          <p data-i18n="edu.e2.desc">Cybersecurity, data protection, GDPR, software security, information security, cyber risk management.</p>
+          <p data-i18n="edu.e2.desc">Postgraduate course (25 ECTS): GDPR, risk management, network and software security.</p>
         </div>
       </article>
       <article class="row edu">
@@ -85,29 +126,28 @@
         <h4 id="sk-dev" data-i18n="skills.dev">Development</h4>
         <ul class="run">
           <li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>Entity Framework</li><li>JavaScript</li>
-          <li>PHP</li><li>Flutter</li><li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>Git</li>
+          <li>PHP</li><li>Python</li><li>Flutter</li><li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>Git</li>
         </ul>
       </div>
       <div class="row" role="group" aria-labelledby="sk-cyber">
         <h4 id="sk-cyber" data-i18n="skills.cyber">Cybersecurity</h4>
         <ul class="run strong">
-          <li>Phishing &amp; BEC detection</li><li>Email security</li><li>Threat intelligence</li>
-          <li>IoC correlation</li><li>Risk scoring</li><li>Log analysis</li><li>Cyber risk</li>
-          <li>Risk management</li><li>Data protection</li><li>DLP</li><li>Application security</li>
+          <li>Phishing &amp; BEC detection</li><li>Threat intelligence</li><li>IoC correlation</li>
+          <li>Risk scoring</li><li>DLP</li><li>HTTP hardening</li><li>SAST / SCA</li>
+          <li>Log analysis</li><li>Risk assessment</li><li>GDPR</li>
         </ul>
       </div>
       <div class="row" role="group" aria-labelledby="sk-tools">
         <h4 id="sk-tools" data-i18n="skills.tools">Tools &amp; Infrastructure</h4>
         <ul class="run">
-          <li>Linux</li><li>Bash</li><li>Docker</li><li>REST APIs</li><li>JWT</li><li>Semgrep</li><li>npm audit</li>
+          <li>Linux</li><li>Bash</li><li>Docker</li><li>REST API</li><li>JWT</li><li>Semgrep</li><li>npm audit</li>
         </ul>
       </div>
       <div class="row" role="group" aria-labelledby="sk-human">
-        <h4 id="sk-human" data-i18n="skills.human">Human skills</h4>
-        <ul class="run">
-          <li>Critical thinking</li><li>Analytical thinking</li><li>Technical communication</li>
-          <li>Problem solving</li><li>Client communication</li><li>Adaptability</li>
-          <li>Attention to detail</li><li>Project management</li>
+        <h4 id="sk-human" data-i18n="skills.human">Soft skills</h4>
+        <ul class="run" data-i18n="skills.human.list">
+          <li>Analytical thinking</li><li>Problem solving</li><li>Attention to detail</li>
+          <li>Technical documentation</li><li>Independent project ownership</li><li>Clear communication</li>
         </ul>
       </div>
     </div>

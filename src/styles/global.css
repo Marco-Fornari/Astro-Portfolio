@@ -357,6 +357,11 @@ h1{font-weight:700;letter-spacing:-.015em;line-height:.98;text-transform:upperca
 .job.now .org{color:hsl(var(--background) / .75)}
 .job.now ::selection{background:var(--paper);color:var(--tinta)}
 .job.now :focus-visible{outline-color:var(--paper)}
+/* bullet points inside a job/project row */
+.points{list-style:none;max-width:64ch}
+.points li{position:relative;padding-left:1.1em;font-size:clamp(15px,1.25vw,16.5px);line-height:1.5;margin-bottom:.5em}
+.points li:last-child{margin-bottom:0}
+.points li::before{content:"";position:absolute;left:0;top:.72em;width:.5em;height:2px;background:currentColor}
 .skills h4{font-size:clamp(14px,1.3vw,16px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding-top:.35em}
 
 /* CONTACT */
@@ -365,6 +370,7 @@ h1{font-weight:700;letter-spacing:-.015em;line-height:.98;text-transform:upperca
   font-size:clamp(34px,6.6vw,96px);line-height:1.06;font-weight:800;letter-spacing:-.03em;text-transform:uppercase;text-wrap:balance;
 }
 .closing em{font-style:normal;background:var(--tinta);color:var(--paper);padding:0 .14em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.contact-note{max-width:48ch;font-size:clamp(17px,1.7vw,22px);line-height:1.45;font-weight:500;margin:calc(-1 * clamp(12px,3vh,32px)) 0 clamp(32px,5vh,56px)}
 .channels{list-style:none;border-top:6px solid var(--rule)}
 .channels li{border-bottom:2px solid var(--rule)}
 .channels a{
