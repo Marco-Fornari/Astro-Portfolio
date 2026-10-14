@@ -1,10 +1,14 @@
 /* =========================================================
-   MAIN — boots every module and drives the single RAF loop
+   MAIN — boots every module
+   ---------------------------------------------------------
+   Nessun loop requestAnimationFrame perpetuo: hero.js e
+   scroll.js chiedono un frame solo quando scroll, puntatore
+   o resize cambiano qualcosa, e restano fermi altrimenti.
    ========================================================= */
 import { initTheme } from "./theme.js";
 import { initLang } from "./i18n.js";
 import { initViewport } from "./viewport.js";
-import { initHero, frameHero } from "./hero.js";
+import { initHero } from "./hero.js";
 import { initScroll } from "./scroll.js";
 import { initRouteFlush } from "./route-flush.js";
 
@@ -14,15 +18,3 @@ initViewport();
 initHero();
 initScroll();
 initRouteFlush();
-
-let running = true, rafId = 0;
-function loop() {
-  if (!running) return;
-  frameHero();    // hero pinning + scroll-driven reveal
-  rafId = requestAnimationFrame(loop);
-}
-document.addEventListener("visibilitychange", () => {
-  running = !document.hidden;
-  if (running) loop(); else cancelAnimationFrame(rafId);
-});
-loop();

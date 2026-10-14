@@ -6,10 +6,16 @@ import { reduceMotion, routes } from "./state.js";
 let current = "home";
 const progressEl = document.getElementById("progress");
 
-addEventListener("scroll", () => {
-  const max = document.documentElement.scrollHeight - innerHeight;
-  if (progressEl) progressEl.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + "%";
-}, { passive: true });
+/* barra di avanzamento: scaleX sul compositor invece di width (che
+   ricalcolava il layout a ogni evento di scroll); al massimo un
+   aggiornamento per frame, con l'altezza del documento in cache */
+let maxScroll = 1, barRaf = 0;
+function measureMax() { maxScroll = Math.max(1, document.documentElement.scrollHeight - innerHeight); }
+function paintBar() {
+  barRaf = 0;
+  if (progressEl) progressEl.style.transform = `scaleX(${Math.min(1, scrollY / maxScroll)})`;
+}
+function requestBar() { if (!barRaf) barRaf = requestAnimationFrame(paintBar); }
 
 function setNav(route) {
   document.querySelectorAll("nav a").forEach(a =>
@@ -26,6 +32,11 @@ function activate(route) {
 
 export function initScroll() {
   setNav("home");
+  measureMax();
+  addEventListener("resize", () => { measureMax(); requestBar(); });
+  new ResizeObserver(() => { measureMax(); requestBar(); }).observe(document.querySelector("main"));
+  addEventListener("scroll", requestBar, { passive: true });
+  requestBar();
 
   const scrollBtn = document.getElementById("scrollBtn");
   if (scrollBtn) scrollBtn.addEventListener("click", () => {

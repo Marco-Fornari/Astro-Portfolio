@@ -124,6 +124,9 @@ body::after{
   animation:mouseWheel 2.2s cubic-bezier(.65,0,.35,1) infinite;
 }
 .scroll-btn .chevron{width:14px;height:7px;display:block;animation:chevDip 2.2s ease-in-out infinite}
+/* invisibile dopo la hero: le animazioni infinite si fermano, niente ridipinture inutili */
+.scroll-btn.is-gone{visibility:hidden}
+.scroll-btn.is-gone .wheel,.scroll-btn.is-gone .chevron{animation-play-state:paused}
 
 @keyframes mouseWheel{
   0%{opacity:1;transform:translateY(0)}
@@ -143,8 +146,9 @@ body::after{
 
 /* scroll progress hairline */
 #progress{
-  position:fixed;top:0;left:0;height:2px;width:0;z-index:60;
+  position:fixed;top:0;left:0;height:2px;width:100%;z-index:60;
   background:var(--accent);opacity:.85;
+  transform:scaleX(0);transform-origin:0 50%;will-change:transform;
 }
 
 /* ============================================================
@@ -423,6 +427,12 @@ body:not([data-route="home"]) #progress{background:hsl(var(--primary));opacity:1
   .hero-id{justify-content:flex-end;padding-bottom:clamp(104px,17vh,150px)}
   .hero-title{font-size:clamp(38px,12.5vw,64px);max-width:100%}
   .hero-copy p{margin-top:18px;letter-spacing:.3em}
+}
+/* telefono: la grana a tutto schermo (filtro SVG fixed sopra a tutto)
+   è un layer in più da comporre a ogni frame di scroll per un
+   effetto al 5% che sul display piccolo non si percepisce */
+@media (max-width:699px){
+  body::after{display:none}
 }
 @media (max-width:640px){
   :root{--nav-h:64px}
