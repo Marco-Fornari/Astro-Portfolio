@@ -80,17 +80,21 @@ export const I18N = {
       "Python, Linux, SQL, SIEM, IDS, risk assessment, identificazione delle minacce, controlli di sicurezza.",
 
     /* SKILLS */
-    "skills.title": "Competenze",
-    "skills.dev": "Sviluppo",
+    "skills.kicker": "03 / COMPETENZE — STACK",
+    "skills.headline": "Lo stack con cui<br><em>costruisco e difendo.</em>",
+    "skills.count": "strumenti",
+    "skills.dev": "Software Developer",
+    "skills.dev.kw":
+      "Clean Architecture · API REST · JWT · Estensioni browser · Automazione via API",
+    "skills.ai": "Intelligenza artificiale",
+    "skills.ai.kw":
+      "Sviluppo assistito da AI · Prompt engineering · LLM in locale · Revisione critica del codice generato",
     "skills.cyber": "Cybersecurity",
-    "skills.tools": "Strumenti &amp; Infrastruttura",
-    "skills.human": "Competenze trasversali",
-    "skills.human.list":
-      "<li>Pensiero analitico</li><li>Problem solving</li><li>Attenzione al dettaglio</li>" +
-      "<li>Documentazione tecnica</li><li>Gestione autonoma dei progetti</li><li>Comunicazione chiara</li>",
+    "skills.cyber.kw":
+      "Rilevamento phishing &amp; BEC · Threat intelligence · Correlazione IoC · Risk scoring · DLP · Hardening HTTP · SAST / SCA · Analisi dei log · SIEM · IDS · Risk assessment · GDPR",
 
     /* CONTACT */
-    "contact.kicker": "03 / CONTATTI",
+    "contact.kicker": "04 / CONTATTI",
     "contact.headline":
       "La sicurezza è un processo<br><em> non un prodotto.</em>",
     "contact.cv": "Scarica il CV",
@@ -171,17 +175,21 @@ export const I18N = {
       "Python, Linux, SQL, SIEM, IDS, risk assessment, threat identification, security controls.",
 
     /* SKILLS */
-    "skills.title": "Skills",
-    "skills.dev": "Development",
+    "skills.kicker": "03 / SKILLS — STACK",
+    "skills.headline": "The stack I use<br><em>to build and defend.</em>",
+    "skills.count": "tools",
+    "skills.dev": "Software Developer",
+    "skills.dev.kw":
+      "Clean Architecture · REST API · JWT · Browser extensions · API automation",
+    "skills.ai": "Artificial intelligence",
+    "skills.ai.kw":
+      "AI-assisted development · Prompt engineering · Local LLMs · Critical review of generated code",
     "skills.cyber": "Cybersecurity",
-    "skills.tools": "Tools &amp; Infrastructure",
-    "skills.human": "Soft skills",
-    "skills.human.list":
-      "<li>Analytical thinking</li><li>Problem solving</li><li>Attention to detail</li>" +
-      "<li>Technical documentation</li><li>Independent project ownership</li><li>Clear communication</li>",
+    "skills.cyber.kw":
+      "Phishing &amp; BEC detection · Threat intelligence · IoC correlation · Risk scoring · DLP · HTTP hardening · SAST / SCA · Log analysis · SIEM · IDS · Risk assessment · GDPR",
 
     /* CONTACT */
-    "contact.kicker": "03 / CONTACT",
+    "contact.kicker": "04 / CONTACT",
     "contact.headline": "Security is a process<br><em> not a product.</em>",
     "contact.cv": "Download CV",
   },
@@ -191,12 +199,14 @@ export const NAV_I18N = {
     home: "HOME",
     about: "CHI SONO",
     experience: "ESPERIENZA",
+    skills: "COMPETENZE",
     contact: "CONTATTI",
   },
   en: {
     home: "HOME",
     about: "ABOUT",
     experience: "EXPERIENCE",
+    skills: "SKILLS",
     contact: "CONTACT",
   },
 };

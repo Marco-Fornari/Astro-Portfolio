@@ -366,7 +366,88 @@ h1{font-weight:700;letter-spacing:-.015em;line-height:.98;text-transform:upperca
 .points li{position:relative;padding-left:1.1em;font-size:clamp(15px,1.25vw,16.5px);line-height:1.5;margin-bottom:.5em}
 .points li:last-child{margin-bottom:0}
 .points li::before{content:"";position:absolute;left:0;top:.72em;width:.5em;height:2px;background:currentColor}
-.skills h4{font-size:clamp(14px,1.3vw,16px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding-top:.35em}
+
+/* SKILLS — tre macro aree, icone a colori; il clic apre lo zoom (src/scripts/skills.js) */
+.stk-intro{
+  padding:clamp(40px,8vh,88px) 0 clamp(32px,5vh,56px);
+}
+.stk-head{
+  font-size:clamp(34px,5.6vw,80px);line-height:1.04;font-weight:800;letter-spacing:-.03em;
+  text-transform:uppercase;text-wrap:balance;
+}
+.stk-head em{font-style:normal;background:var(--tinta);color:var(--paper);padding:0 .14em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.stk-idx,.stk-count{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-2)}
+.stk-idx{margin-bottom:10px;font-variant-numeric:tabular-nums}
+.stk-count{margin-top:8px}
+.stk-count span:first-child{color:var(--tinta);font-weight:700}
+.poster .stk-label h3{padding-top:0}
+
+.stk-grid{
+  --s:clamp(46px,4.4vw,60px);
+  list-style:none;display:flex;flex-wrap:wrap;
+  gap:clamp(18px,2vw,28px) clamp(18px,2.4vw,32px);
+}
+.stk-btn{
+  position:relative;display:block;padding:6px;margin:-6px;
+  background:none;border:0;border-radius:10px;cursor:zoom-in;color:var(--tinta);
+  transition:transform .35s var(--ease-out),opacity .3s;
+}
+.stk-ico{display:block;width:var(--s);height:var(--s)}
+.stk-ico svg{display:block;width:100%;height:100%}
+/* voci senza logo: sigla in un riquadro, stessa misura delle icone */
+.stk-mono{
+  display:grid;place-items:center;border:2px solid currentColor;border-radius:14%;
+  font-family:var(--mono);font-weight:700;font-size:calc(var(--s) * .26);letter-spacing:.02em;line-height:1;
+}
+.stk-grid.is-dim .stk-btn{opacity:.25}
+.stk-grid .stk-btn.is-zoomed{opacity:0}
+/* etichetta al passaggio del mouse / al focus da tastiera.
+   display:none a riposo: un'etichetta solo trasparente allargherebbe
+   la pagina sui telefoni (scroll orizzontale fantasma) */
+.stk-btn::after{
+  content:attr(data-name);position:absolute;left:50%;bottom:calc(100% + 6px);z-index:2;
+  display:none;transform:translate(-50%,0);pointer-events:none;white-space:nowrap;
+  padding:4px 8px;background:var(--tinta);color:var(--paper);
+  font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  animation:stkTip .22s var(--ease-out);
+}
+@keyframes stkTip{from{opacity:0;transform:translate(-50%,4px)}}
+@media (hover:hover){
+  .stk-btn:hover{transform:translateY(-3px)}
+  .stk-grid:not(.is-dim) .stk-btn:hover::after{display:block}
+}
+.stk-grid:not(.is-dim) .stk-btn:focus-visible::after{display:block}
+.stk-kw{
+  margin-top:clamp(22px,2.8vw,34px);max-width:86ch;
+  font-family:var(--mono);font-size:12px;line-height:1.75;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-2);
+}
+
+/* pannello di zoom: fuori dal flusso, sotto l'header (50) e sopra il resto */
+.stk-lens{
+  --stk-lens:112px;
+  position:fixed;left:0;top:0;z-index:48;display:none;
+  width:min(280px,calc(100vw - 24px));padding:24px 20px 22px;text-align:center;
+  color:hsl(var(--foreground));
+}
+.stk-lens.is-open{display:block}
+.stk-lens-bg{
+  position:absolute;inset:0;background:hsl(216 30% 4.5%);
+  border:2px solid hsl(var(--foreground));box-shadow:0 26px 70px rgba(0,0,0,.6);
+}
+.stk-lens-ico{position:relative;width:var(--stk-lens);height:var(--stk-lens);margin:0 auto}
+.stk-lens-ico .stk-ico{--s:var(--stk-lens)}
+.stk-lens-name{position:relative;margin-top:18px;font-size:21px;font-weight:800;letter-spacing:-.01em;line-height:1.1;text-transform:uppercase}
+.stk-lens-ctx{position:relative;margin-top:9px;font-family:var(--mono);font-size:11.5px;line-height:1.5;letter-spacing:.06em;text-transform:uppercase;color:hsl(var(--foreground) / .72)}
+
+@media (max-width:900px){
+  .stk-label{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin-bottom:12px}
+  .stk-label h3{order:-1}
+  .stk-idx,.stk-count{margin:0}
+}
+@media (max-width:699px){
+  .stk-grid{--s:44px;gap:18px 20px}
+  .stk-lens{--stk-lens:96px}
+}
 
 /* CONTACT */
 .closing{
@@ -434,16 +515,27 @@ body:not([data-route="home"]) #progress{background:hsl(var(--primary));opacity:1
 @media (max-width:699px){
   body::after{display:none}
 }
+nav a{white-space:nowrap}
 @media (max-width:640px){
   :root{--nav-h:64px}
-  nav{gap:14px}
+  nav{gap:12px}
+  nav a{font-size:10px;letter-spacing:.08em}
+  /* cinque capitoli non stanno in una riga sul telefono: HOME è
+     comunque raggiungibile tornando su, quindi qui si nasconde */
+  nav .home-link{display:none}
   #home{height:160vh}
 }
 /* very narrow phones: keep the row on one line without wrapping */
 @media (max-width:420px){
-  nav{gap:11px}
-  nav a{font-size:10px;letter-spacing:.08em}
-  .lang{font-size:10px;gap:5px}
+  nav{gap:10px}
+  nav a{letter-spacing:.04em}
+  .lang{font-size:10px;gap:5px;letter-spacing:.08em}
+}
+@media (max-width:380px){
+  header{padding:0 16px}
+  nav{gap:8px}
+  nav a{font-size:9.5px;letter-spacing:.02em}
+  .lang{gap:3px;letter-spacing:.02em}
 }
 
 /* ============================================================

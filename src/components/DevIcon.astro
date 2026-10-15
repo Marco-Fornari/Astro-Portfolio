@@ -1,0 +1,12 @@
+---
+// Logo tecnologia da Devicon (devicon.dev, MIT — vedi src/icons/devicon/LICENSE).
+// Varianti "plain" self-hosted e ricolorate a currentColor: seguono il tema chiaro/scuro.
+// L'SVG viene inlinato al build: nessuna richiesta esterna, la CSP resta invariata.
+// Senza `name` (o per voci che Devicon non copre) rende un trattino neutro allineato.
+const svgs = import.meta.glob('../icons/devicon/*.svg', { query: '?raw', import: 'default', eager: true });
+const { name } = Astro.props;
+const raw = name ? svgs[`../icons/devicon/${name}.svg`] : undefined;
+if (name && !raw) throw new Error(`DevIcon: "${name}.svg" non trovato in src/icons/devicon/`);
+const svg = raw?.replace('<svg ', '<svg class="sk-ico" aria-hidden="true" focusable="false" ');
+---
+{svg ? <Fragment set:html={svg} /> : <span class="sk-ico sk-ico--none" aria-hidden="true"></span>}

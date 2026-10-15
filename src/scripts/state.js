@@ -8,5 +8,5 @@ export const MONO = 'ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monos
 /* viewport metrics (updated by viewport.js on resize) */
 export const view = { W: 0, H: 0, DPR: 1, mobile: false };
 
-/* the four narrative chapters, in order */
-export const routes = ["home", "about", "experience", "contact"];
+/* the narrative chapters, in order */
+export const routes = ["home", "about", "experience", "skills", "contact"];

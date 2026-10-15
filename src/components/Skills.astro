@@ -1,0 +1,56 @@
+---
+// Skills — lo stack in tre macro aree, icone a colori; un clic ingrandisce (src/scripts/skills.js)
+// Icone self-hosted e inlinate al build: nessuna richiesta esterna, la CSP resta invariata.
+// Fonti: Devicon (MIT, vedi src/icons/skills/LICENSE-devicon) e Simple Icons (CC0).
+import { AREAS } from '../data/skills.js';
+
+const svgs = import.meta.glob('../icons/skills/*.svg', { query: '?raw', import: 'default', eager: true });
+const icon = (name) => {
+  const raw = svgs[`../icons/skills/${name}.svg`];
+  if (!raw) throw new Error(`Skills: "${name}.svg" non trovato in src/icons/skills/`);
+  return raw.replace('<svg ', '<svg class="stk-svg" aria-hidden="true" focusable="false" ');
+};
+
+// testi di default (EN): l'i18n li sostituisce al caricamento
+const LABELS = {
+  dev: { title: 'Software Developer', kw: 'Clean Architecture · REST API · JWT · Browser extensions · API automation' },
+  ai: { title: 'Artificial intelligence', kw: 'AI-assisted development · Prompt engineering · Local LLMs · Critical review of generated code' },
+  cyber: { title: 'Cybersecurity', kw: 'Phishing &amp; BEC detection · Threat intelligence · IoC correlation · Risk scoring · DLP · HTTP hardening · SAST / SCA · Log analysis · SIEM · IDS · Risk assessment · GDPR' },
+};
+---
+<section id="skills" class="poster" aria-label="Skills">
+  <div class="band"><p class="band-label" data-i18n="skills.kicker">03 / SKILLS — STACK</p></div>
+  <div class="sheet">
+    <div class="stk-intro">
+      <h2 class="stk-head" data-i18n="skills.headline">The stack I use<br><em>to build and defend.</em></h2>
+    </div>
+
+    <div class="rows">
+      {AREAS.map((area, a) => (
+        <div class="row stk-area" role="group" aria-labelledby={`stk-${area.id}`}>
+          <div class="stk-label">
+            <p class="stk-idx">{`${String(a + 1).padStart(2, '0')} / ${String(AREAS.length).padStart(2, '0')}`}</p>
+            <h3 id={`stk-${area.id}`} data-i18n={`skills.${area.id}`}>{LABELS[area.id].title}</h3>
+            <p class="stk-count"><span>{area.items.length}</span> <span data-i18n="skills.count">tools</span></p>
+          </div>
+          <div class="stk-body">
+            <ul class="stk-grid">
+              {area.items.map((s) => (
+                <li>
+                  <button class="stk-btn" type="button" data-name={s.name}
+                    data-ctx-it={s.ctx.it} data-ctx-en={s.ctx.en} aria-label={`${s.name} — ${s.ctx.en}`}>
+                    {s.icon
+                      ? <span class="stk-ico" set:html={icon(s.icon)} />
+                      : <span class="stk-ico stk-mono" aria-hidden="true">{s.mono}</span>}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <p class="stk-kw" data-i18n={`skills.${area.id}.kw`} set:html={LABELS[area.id].kw} />
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>

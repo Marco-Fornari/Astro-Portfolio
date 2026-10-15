@@ -4,7 +4,7 @@ Single-page portfolio with a "system / terminal" identity: numbered chapters,
 monospaced technical typography, and interactions that read like a machine
 processing information rather than a website showing off.
 
-**Live:** https://mfornaridev.netlify.app
+**Live:** marcofornari.com
 
 No runtime framework. Astro compiles the components away at build time, so what
 reaches the browser is HTML, CSS and eight vanilla ES modules — about **16 kB of
@@ -12,16 +12,16 @@ JavaScript (6 kB gzipped)** for the whole site.
 
 ## Stack
 
-| Layer | Choice |
-|---|---|
-| Build | [Astro](https://astro.build) 4 — `output: 'static'`, no adapter, no integrations |
-| Components | `.astro` templates with **zero hydration** (no `client:*` directives) |
-| Styling | One hand-written `global.css`, design tokens as HSL custom properties |
-| Behaviour | Vanilla ES modules, bundled by Vite into a single hashed chunk |
-| Graphics | Canvas 2D, used only for the hero's scroll-driven reveal |
-| i18n | Runtime dictionary (IT / EN), persisted in `localStorage` |
-| Fonts | System stacks only — no webfont requests |
-| Hosting | Netlify (Node 20), static `dist/` + security headers |
+| Layer      | Choice                                                                           |
+| ---------- | -------------------------------------------------------------------------------- |
+| Build      | [Astro](https://astro.build) 4 — `output: 'static'`, no adapter, no integrations |
+| Components | `.astro` templates with **zero hydration** (no `client:*` directives)            |
+| Styling    | One hand-written `global.css`, design tokens as HSL custom properties            |
+| Behaviour  | Vanilla ES modules, bundled by Vite into a single hashed chunk                   |
+| Graphics   | Canvas 2D, used only for the hero's scroll-driven reveal                         |
+| i18n       | Runtime dictionary (IT / EN), persisted in `localStorage`                        |
+| Fonts      | System stacks only — no webfont requests                                         |
+| Hosting    | Netlify (Node 20), static `dist/` + security headers                             |
 
 ## Structure
 
