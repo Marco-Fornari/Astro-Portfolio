@@ -16,14 +16,12 @@ export const I18N = {
       "Ciao, sono Marco: <strong>developer junior</strong> con una passione per reti, sistemi e sicurezza informatica.",
     "about.p2":
       "Mi sono diplomato all'ITS in Industrial Software Development con 110 e lode. Nel 2026 ho sviluppato Overguard, una piattaforma anti-phishing per PMI: il primo progetto in cui ho unito sviluppo e sicurezza.",
-    "about.traj": "Percorso",
-    "about.traj2": "CYBERSECURITY · UNIVPM E GOOGLE",
-    "about.traj3": "ITS · PRIME ESPERIENZE DA DEVELOPER",
-    "about.trajNow": "OGGI",
-    "about.traj4": "SVILUPPO → RETI, SISTEMI E SICUREZZA",
     "about.goal": "Cosa cerco",
+    "about.goalRoles":
+      "<span>Sistemista di rete</span><span class=\"seek-or\">oppure</span><span>Cybersecurity analyst</span>",
     "about.goalText":
-      "Oggi sono sviluppatore. Voglio crescere verso un ruolo da <strong>sistemista di rete</strong> o <strong>cybersecurity analyst</strong>, in un team dove le mie basi da developer siano utili e dove possa imparare sul campo. Nel frattempo preparo la certificazione CEH.",
+      "Oggi sono sviluppatore e voglio crescere in questa direzione, in un team dove le mie basi da developer siano utili e dove possa imparare sul campo. Nel frattempo preparo la certificazione CEH.",
+    "about.goalCta": "Parliamone",
 
     /* EXPERIENCE */
     "xp.kicker": "02 / ESPERIENZA — STORIA DI SISTEMA",
@@ -111,14 +109,12 @@ export const I18N = {
       "Hi, I'm Marco: a <strong>junior developer</strong> with a passion for networks, systems and cybersecurity.",
     "about.p2":
       "I graduated from ITS in Industrial Software Development with 110/110 cum laude. In 2026 I built Overguard, an anti-phishing platform for small businesses: the first project where I brought development and security together.",
-    "about.traj": "Path",
-    "about.traj2": "CYBERSECURITY · UNIVPM &amp; GOOGLE",
-    "about.traj3": "ITS · FIRST DEVELOPER ROLES",
-    "about.trajNow": "NOW",
-    "about.traj4": "DEVELOPMENT → NETWORKS, SYSTEMS &amp; SECURITY",
     "about.goal": "Looking for",
+    "about.goalRoles":
+      "<span>Network &amp; systems administrator</span><span class=\"seek-or\">or</span><span>Cybersecurity analyst</span>",
     "about.goalText":
-      "Today I'm a developer. I want to grow towards a <strong>network and systems administrator</strong> or <strong>cybersecurity analyst</strong> role, in a team where my development background helps and I can learn on the job. Meanwhile, I'm preparing for the CEH certification.",
+      "Today I'm a developer and I want to grow in this direction, in a team where my development background helps and I can learn on the job. Meanwhile, I'm preparing for the CEH certification.",
+    "about.goalCta": "Let's talk",
 
     /* EXPERIENCE */
     "xp.kicker": "02 / EXPERIENCE — SYSTEM HISTORY",

@@ -1,5 +1,6 @@
 ---
-// Experience, projects & education — departures board
+// Experience, projects & education — departures board.
+// Jobs read as a line of stops: when/where on the rail (left), what on the right.
 import EduLogo from './EduLogo.astro';
 ---
 <section id="experience" class="poster" aria-label="Experience, projects and education">
@@ -11,47 +12,67 @@ import EduLogo from './EduLogo.astro';
 
     <div class="rows">
       <article class="row job now">
-        <p class="when" data-i18n="xp.j1.when">FEB 2026 — JUL 2026</p>
+        <div class="job-meta">
+          <p class="when" data-i18n="xp.j1.when">FEB 2026 — JUL 2026</p>
+          <p class="org">Overside Srl</p>
+        </div>
         <div class="body">
           <h4 data-i18n="xp.j1.role">Junior Developer · Security Engineering</h4>
-          <p class="org">Overside Srl</p>
           <p data-i18n="xp.j1.desc">I built Overguard, a platform that helps small businesses spot phishing emails and Business Email Compromise fraud. It was also my ITS thesis project.</p>
-          <p class="run-label" data-i18n="xp.did">What I did</p>
-          <ul class="points" data-i18n="xp.j1.points">
-            <li>Automated analysis of email headers, sender, domain and links, with extraction of indicators of compromise (IoCs).</li>
-            <li>Risk scoring across 5 threat intelligence sources (VirusTotal, AlienVault OTX, URLScan.io, Hybrid Analysis, Google Safe Browsing), with caching and fallback when a source doesn't respond.</li>
-            <li>DLP module that checks outgoing emails for sensitive content.</li>
-            <li>.NET 10 backend with JWT-secured REST APIs, PostgreSQL and Docker deployment on Linux; Chrome and Thunderbird extensions connected to the backend.</li>
-          </ul>
-          <p class="run-label" data-i18n="xp.learned">What I learned</p>
-          <p data-i18n="xp.j1.learn">How to design a complete system, from the database to the browser extensions, and to ask early on what can go wrong: a source that stops responding, an API rate limit, data leaving when it shouldn't.</p>
-          <p class="run-label" data-i18n="xp.stack">Stack</p>
-          <ul class="run">
-            <li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>PostgreSQL</li><li>REST API</li>
-            <li>JWT</li><li>Docker</li><li>Linux</li><li>Git</li>
-          </ul>
+          <div class="job-detail">
+            <div class="job-did">
+              <p class="run-label" data-i18n="xp.did">What I did</p>
+              <ul class="points" data-i18n="xp.j1.points">
+                <li>Automated analysis of email headers, sender, domain and links, with extraction of indicators of compromise (IoCs).</li>
+                <li>Risk scoring across 5 threat intelligence sources (VirusTotal, AlienVault OTX, URLScan.io, Hybrid Analysis, Google Safe Browsing), with caching and fallback when a source doesn't respond.</li>
+                <li>DLP module that checks outgoing emails for sensitive content.</li>
+                <li>.NET 10 backend with JWT-secured REST APIs, PostgreSQL and Docker deployment on Linux; Chrome and Thunderbird extensions connected to the backend.</li>
+              </ul>
+            </div>
+            <div class="job-learn">
+              <p class="run-label" data-i18n="xp.learned">What I learned</p>
+              <p data-i18n="xp.j1.learn">How to design a complete system, from the database to the browser extensions, and to ask early on what can go wrong: a source that stops responding, an API rate limit, data leaving when it shouldn't.</p>
+            </div>
+          </div>
+          <div class="job-stack">
+            <p class="run-label" data-i18n="xp.stack">Stack</p>
+            <ul class="run">
+              <li>C#</li><li>.NET 10</li><li>ASP.NET Core</li><li>PostgreSQL</li><li>REST API</li>
+              <li>JWT</li><li>Docker</li><li>Linux</li><li>Git</li>
+            </ul>
+          </div>
         </div>
       </article>
 
       <article class="row job">
-        <p class="when" data-i18n="xp.j2.when">APR 2025 — JAN 2026</p>
+        <div class="job-meta">
+          <p class="when" data-i18n="xp.j2.when">APR 2025 — JAN 2026</p>
+          <p class="org">Levante Yachts Srl</p>
+        </div>
         <div class="body">
           <h4 data-i18n="xp.j2.role">Junior Developer</h4>
-          <p class="org">Levante Yachts Srl</p>
           <p data-i18n="xp.j2.desc">I worked on the company portal, on both frontend and backend.</p>
-          <p class="run-label" data-i18n="xp.did">What I did</p>
-          <ul class="points" data-i18n="xp.j2.points">
-            <li>Automated content publishing by connecting WordPress and Google Sheets through REST APIs.</li>
-            <li>Managed the MySQL database, writing SQL queries to verify and clean data.</li>
-            <li>Built pages and features in HTML, CSS, JavaScript and PHP.</li>
-          </ul>
-          <p class="run-label" data-i18n="xp.learned">What I learned</p>
-          <p data-i18n="xp.j2.learn">How to work on a live system, where every change touches real data and content.</p>
-          <p class="run-label" data-i18n="xp.stack">Stack</p>
-          <ul class="run">
-            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li>
-            <li>WordPress API</li><li>Google Sheets API</li>
-          </ul>
+          <div class="job-detail">
+            <div class="job-did">
+              <p class="run-label" data-i18n="xp.did">What I did</p>
+              <ul class="points" data-i18n="xp.j2.points">
+                <li>Automated content publishing by connecting WordPress and Google Sheets through REST APIs.</li>
+                <li>Managed the MySQL database, writing SQL queries to verify and clean data.</li>
+                <li>Built pages and features in HTML, CSS, JavaScript and PHP.</li>
+              </ul>
+            </div>
+            <div class="job-learn">
+              <p class="run-label" data-i18n="xp.learned">What I learned</p>
+              <p data-i18n="xp.j2.learn">How to work on a live system, where every change touches real data and content.</p>
+            </div>
+          </div>
+          <div class="job-stack">
+            <p class="run-label" data-i18n="xp.stack">Stack</p>
+            <ul class="run">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li>
+              <li>WordPress API</li><li>Google Sheets API</li>
+            </ul>
+          </div>
         </div>
       </article>
     </div>
@@ -59,19 +80,27 @@ import EduLogo from './EduLogo.astro';
     <h3 class="sub-title" data-i18n="proj.title">Projects</h3>
     <div class="rows">
       <article class="row job">
-        <p class="when">2026</p>
+        <div class="job-meta">
+          <p class="when">2026</p>
+          <p class="org">Astro · Netlify</p>
+        </div>
         <div class="body">
           <h4 data-i18n="proj.p1.title">This portfolio</h4>
-          <p class="org">Astro · Netlify</p>
           <p data-i18n="proj.p1.desc">The site you're reading: I built it with security as the starting point, not an add-on.</p>
-          <p class="run-label" data-i18n="xp.did">What I did</p>
-          <ul class="points" data-i18n="proj.p1.points">
-            <li>Static site, to keep the attack surface as small as possible.</li>
-            <li>HTTP security headers (CSP, HSTS, Permissions-Policy), rated A+ on securityheaders.com.</li>
-            <li>Code scanning with Semgrep and custom rules, dependency checks with npm audit.</li>
-          </ul>
-          <p class="run-label" data-i18n="xp.learned">What I learned</p>
-          <p data-i18n="proj.p1.learn">To apply what I'd studied to a project of my own: hardening, static analysis and triaging the findings.</p>
+          <div class="job-detail">
+            <div class="job-did">
+              <p class="run-label" data-i18n="xp.did">What I did</p>
+              <ul class="points" data-i18n="proj.p1.points">
+                <li>Static site, to keep the attack surface as small as possible.</li>
+                <li>HTTP security headers (CSP, HSTS, Permissions-Policy), rated A+ on securityheaders.com.</li>
+                <li>Code scanning with Semgrep and custom rules, dependency checks with npm audit.</li>
+              </ul>
+            </div>
+            <div class="job-learn">
+              <p class="run-label" data-i18n="xp.learned">What I learned</p>
+              <p data-i18n="proj.p1.learn">To apply what I'd studied to a project of my own: hardening, static analysis and triaging the findings.</p>
+            </div>
+          </div>
         </div>
       </article>
     </div>

@@ -1,5 +1,5 @@
 ---
-// About — who I am, path and direction as timetable rows
+// About — who I am, and the role I'm looking for (the one inverted row)
 ---
 <section id="about" class="poster" aria-label="About Marco Fornari">
   <div class="band"><p class="band-label" data-i18n="about.kicker">01 / ABOUT</p></div>
@@ -18,19 +18,13 @@
         </div>
       </div>
 
-      <div class="row">
-        <h3 data-i18n="about.traj">Path</h3>
-        <ol class="traj">
-          <li><span class="t">2024</span><span data-i18n="about.traj2">CYBERSECURITY · UNIVPM &amp; GOOGLE</span></li>
-          <li><span class="t">2024–26</span><span data-i18n="about.traj3">ITS · FIRST DEVELOPER ROLES</span></li>
-          <li class="now"><span class="t" data-i18n="about.trajNow">NOW</span><span data-i18n="about.traj4">DEVELOPMENT → NETWORKS, SYSTEMS &amp; SECURITY</span></li>
-        </ol>
-      </div>
-
-      <div class="row">
+      <!-- the selected departure: what I'm looking for, inverted and set large -->
+      <div class="row seek">
         <h3 data-i18n="about.goal">Looking for</h3>
-        <div class="prose">
-          <p data-i18n="about.goalText">Today I'm a developer. I want to grow towards a <strong>network and systems administrator</strong> or <strong>cybersecurity analyst</strong> role, in a team where my development background helps and I can learn on the job. Meanwhile, I'm preparing for the CEH certification.</p>
+        <div class="seek-body">
+          <p class="seek-roles" data-i18n="about.goalRoles"><span>Network &amp; systems administrator</span><span class="seek-or">or</span><span>Cybersecurity analyst</span></p>
+          <p class="seek-text" data-i18n="about.goalText">Today I'm a developer and I want to grow in this direction, in a team where my development background helps and I can learn on the job. Meanwhile, I'm preparing for the CEH certification.</p>
+          <a class="seek-cta" href="#contact"><span data-i18n="about.goalCta">Let's talk</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m0 0l-6-6m6 6l-6 6"/></svg></a>
         </div>
       </div>
     </div>
