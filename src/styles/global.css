@@ -351,6 +351,19 @@ h1{font-weight:700;letter-spacing:-.015em;line-height:.98;text-transform:upperca
 .edu .body h4{font-size:clamp(17px,1.7vw,22px)}
 .row.edu{padding:clamp(14px,2vw,22px) 0;border-bottom-width:1px}
 .row.edu .org{margin:4px 0 8px}
+/* logo dell'ente: riquadro chiaro uguale per tutti, così loghi diversi stanno insieme */
+.edu-body{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:clamp(14px,1.8vw,24px);align-items:start}
+.edu-logo{
+  --box:clamp(44px,3.8vw,54px);
+  width:var(--box);height:var(--box);display:grid;place-items:center;padding:6px;
+  background:#fff;border-radius:10px;overflow:hidden;
+}
+.edu-logo svg,.edu-logo img{display:block;width:100%;height:100%;object-fit:contain}
+.edu-logo--mono{
+  padding:0;color:hsl(216 30% 8%);
+  font-family:var(--mono);font-weight:800;font-size:calc(var(--box) * .3);letter-spacing:-.02em;line-height:1;
+}
+.edu-logo--mono.is-long{font-size:calc(var(--box) * .18)}
 /* the selected departure: inverted row */
 .job.now{
   background:var(--tinta);color:var(--paper);

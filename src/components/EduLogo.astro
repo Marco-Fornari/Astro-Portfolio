@@ -1,0 +1,15 @@
+---
+// Logo dell'ente in Formazione & Certificazioni.
+// Cerca src/icons/edu/<name>.svg (inlinato) oppure .png/.jpg/.webp (ottimizzato da Astro);
+// se il file non c'è mostra la sigla `mono` nello stesso riquadro.
+const svgs = import.meta.glob('../icons/edu/*.svg', { query: '?raw', import: 'default', eager: true });
+const imgs = import.meta.glob('../icons/edu/*.{png,jpg,jpeg,webp}', { import: 'default', eager: true });
+const { name, mono } = Astro.props;
+const raw = svgs[`../icons/edu/${name}.svg`];
+const svg = raw?.replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
+const img = Object.entries(imgs).find(([p]) => p.split('/').pop().split('.')[0] === name)?.[1];
+const src = img && (img.src ?? img);
+---
+<span class:list={['edu-logo', !svg && !src && 'edu-logo--mono', !svg && !src && mono.length > 3 && 'is-long']} aria-hidden="true">
+  {svg ? <Fragment set:html={svg} /> : src ? <img src={src} alt="" loading="lazy" decoding="async" /> : mono}
+</span>

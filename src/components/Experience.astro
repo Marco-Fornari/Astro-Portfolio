@@ -1,5 +1,6 @@
 ---
 // Experience, projects & education — departures board
+import EduLogo from './EduLogo.astro';
 ---
 <section id="experience" class="poster" aria-label="Experience, projects and education">
   <div class="band"><p class="band-label" data-i18n="xp.kicker">02 / EXPERIENCE — SYSTEM HISTORY</p></div>
@@ -79,34 +80,46 @@
     <div class="rows">
       <article class="row edu">
         <p class="when" data-i18n="edu.e4.when">IN PROGRESS — 2026</p>
-        <div class="body">
+        <div class="body edu-body">
+          <EduLogo name="ceh" mono="CEH" />
+          <div class="edu-text">
           <h4>CEH — Certified Ethical Hacker</h4>
           <p class="org">EC-Council</p>
           <p data-i18n="edu.e4.desc">Currently preparing: ethical hacking, vulnerabilities, network and system security.</p>
+          </div>
         </div>
       </article>
       <article class="row edu">
         <p class="when">2024 — 2026</p>
-        <div class="body">
+        <div class="body edu-body">
+          <EduLogo name="its" mono="ITS" />
+          <div class="edu-text">
           <h4>ITS Smart Academy</h4>
           <p class="org" data-i18n="edu.e1.sub">INDUSTRIAL SOFTWARE DEVELOPER<br>EQF LEVEL 5 · 110/110 CUM LAUDE</p>
           <p data-i18n="edu.e1.desc">Two-year higher technical program in industrial software development.</p>
+          </div>
         </div>
       </article>
       <article class="row edu">
         <p class="when">2024</p>
-        <div class="body">
+        <div class="body edu-body">
+          <EduLogo name="univpm" mono="UNIVPM" />
+          <div class="edu-text">
           <h4>Università Politecnica delle Marche</h4>
           <p class="org">Cyber Risk &amp; Data Protection</p>
           <p data-i18n="edu.e2.desc">Postgraduate course (25 ECTS): GDPR, risk management, network and software security.</p>
+          </div>
         </div>
       </article>
       <article class="row edu">
         <p class="when">2024</p>
-        <div class="body">
+        <div class="body edu-body">
+          <EduLogo name="google" mono="G" />
+          <div class="edu-text">
           <h4>Google Cybersecurity Certificate</h4>
           <p class="org">Foundations &amp; Operations</p>
           <p data-i18n="edu.e3.desc">Python, Linux, SQL, SIEM, IDS, risk assessment, threat identification, security controls.</p>
+          </div>
         </div>
       </article>
     </div>
