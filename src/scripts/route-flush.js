@@ -163,9 +163,16 @@ export function initRouteFlush() {
     if (!target) return;
     e.preventDefault();
     if (running) return;                          /* transizione già in corso */
-    const from = here || document.body.dataset.route || "home";
+    /* a transizione ferma la sezione reale è quella di scroll.js: `here`
+       ricorda solo l'ultimo click, e dopo uno scroll a mano sarebbe vecchia
+       (riclicando la sezione di prima partiva un lungo smooth-scroll) */
+    const from = document.body.dataset.route || here || "home";
     if (from === to) {                            /* stessa sezione: solo scroll */
-      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      /* nella hero resta lo scroll animato di sempre; nelle sezioni
+         interne il salto è immediato, come un'àncora nativa */
+      const smooth = to === "home" && !reduceMotion;
+      target.scrollIntoView({ behavior: smooth ? "smooth" : "instant", block: "start" });
+      here = to;
       return;
     }
     here = to;

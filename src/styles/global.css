@@ -90,7 +90,13 @@
    BASE
    ============================================================ */
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+/* smooth solo finché si è nella hero (homepage); nelle sezioni interne
+   (data-route ≠ home, aggiornato da scroll.js) lo scroll resta nativo e
+   un link àncora salta subito. Senza :has() vale ovunque il default
+   nativo: la hero non ne dipende, i suoi scroll animati sono espliciti in JS */
+@media (prefers-reduced-motion:no-preference){
+  html:has(> body[data-route="home"]){scroll-behavior:smooth}
+}
 body{
   background:var(--bg);
   transition:background .5s,color .5s;
@@ -378,14 +384,10 @@ h1{font-weight:700;letter-spacing:-.015em;line-height:.98;text-transform:upperca
 .stops span::after{ /* line to next stop */
   content:"";position:absolute;top:calc(clamp(16px,1.9vw,24px) / 2 - clamp(3px,.4vw,5px) / 2);
   left:clamp(16px,1.9vw,24px);right:0;height:clamp(3px,.4vw,5px);background:var(--tinta);
-  transform-origin:left;
 }
+/* la linea è già disegnata: niente più animazione legata allo scroll */
 .stops span:last-child::before{background:hsl(var(--primary));border-color:var(--tinta)}
 .stops span:last-child::after{content:none}
-@supports (animation-timeline:view()){
-  .stops span::after{animation:draw linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
-  @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-}
 .job .when,.edu .when{
   font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:clamp(13px,1.15vw,15px);
   font-weight:700;letter-spacing:.02em;line-height:1.5;padding-top:.45em;
@@ -630,7 +632,7 @@ body:not([data-route="home"]) #progress{background:hsl(var(--primary));opacity:1
   .stops{flex-direction:column;gap:0;padding-left:0}
   .stops span{flex:none;padding:0 0 22px clamp(36px,10vw,48px);font-size:clamp(28px,9vw,40px)}
   .stops span::before{top:.1em}
-  .stops span::after{top:.1em;left:calc(clamp(16px,1.9vw,24px) / 2 - 1px);width:clamp(3px,.4vw,5px);height:100%;right:auto;transform-origin:top}
+  .stops span::after{top:.1em;left:calc(clamp(16px,1.9vw,24px) / 2 - 1px);width:clamp(3px,.4vw,5px);height:100%;right:auto}
 }
 
 

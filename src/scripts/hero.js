@@ -193,13 +193,20 @@ function frame() {
 }
 function request() { if (!rafId) rafId = requestAnimationFrame(frame); }
 
+/* nelle sezioni interne la hero è già chiusa (p = 1) e fuori schermo:
+   lo scroll non chiede più frame qui, il thread resta libero */
+function onScroll() {
+  if (lastP === 1 && scrollY > geo.end) return;
+  request();
+}
+
 /* ---------- public API ---------- */
 export function initHero() {
   measure();
   sizeReveal();
   new ResizeObserver(() => { measure(); lastP = -1; request(); }).observe(homeSec);
   if (rctx) new ResizeObserver(() => { sizeReveal(); request(); }).observe(inspector);
-  addEventListener("scroll", request, { passive: true });
+  addEventListener("scroll", onScroll, { passive: true });
   request();
 }
 export { sizeReveal };
