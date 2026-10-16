@@ -6,7 +6,7 @@ const svgs = import.meta.glob('../icons/edu/*.svg', { query: '?raw', import: 'de
 const imgs = import.meta.glob('../icons/edu/*.{png,jpg,jpeg,webp}', { import: 'default', eager: true });
 const { name, mono } = Astro.props;
 const raw = svgs[`../icons/edu/${name}.svg`];
-const svg = raw?.replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
+const svg = raw?.replace(/<metadata>[\s\S]*?<\/metadata>/, '').replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
 const img = Object.entries(imgs).find(([p]) => p.split('/').pop().split('.')[0] === name)?.[1];
 const src = img && (img.src ?? img);
 ---

@@ -177,7 +177,10 @@ function updateHero() {
   heroId.style.transform = view.mobile
     ? `translate3d(0,${-p * 48}px,0)`
     : `translate3d(0,${-p * 48}px,0) scale(${1 - p * 0.04})`;
-  heroMedia.style.transform = `scale(${1 + p * 0.07})`;
+  /* sul telefono la superficie non zooma: riscalare a ogni frame due
+     foto a tutto schermo invalida l'intero frame (Firefox lo ricompone
+     da capo e scatta), per un 7% che su uno schermo piccolo non si nota */
+  heroMedia.style.transform = view.mobile ? "" : `scale(${1 + p * 0.07})`;
   heroVeil.style.opacity = Math.max(0, (p - 0.6) * 1.6);   /* earlier, gentler fade into the flow */
 }
 

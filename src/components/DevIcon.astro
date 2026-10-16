@@ -7,6 +7,6 @@ const svgs = import.meta.glob('../icons/devicon/*.svg', { query: '?raw', import:
 const { name } = Astro.props;
 const raw = name ? svgs[`../icons/devicon/${name}.svg`] : undefined;
 if (name && !raw) throw new Error(`DevIcon: "${name}.svg" non trovato in src/icons/devicon/`);
-const svg = raw?.replace('<svg ', '<svg class="sk-ico" aria-hidden="true" focusable="false" ');
+const svg = raw?.replace(/<metadata>[\s\S]*?<\/metadata>/, '').replace('<svg ', '<svg class="sk-ico" aria-hidden="true" focusable="false" ');
 ---
 {svg ? <Fragment set:html={svg} /> : <span class="sk-ico sk-ico--none" aria-hidden="true"></span>}

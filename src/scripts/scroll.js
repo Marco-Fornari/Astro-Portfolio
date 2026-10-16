@@ -21,6 +21,14 @@ function paintBar() {
   if (progressEl) progressEl.style.transform = `scaleX(${Math.min(1, scrollY / maxScroll)})`;
 }
 function requestBar() { if (!barRaf) barRaf = requestAnimationFrame(paintBar); }
+/* su Firefox Android la barra degli indirizzi che entra/esce durante lo
+   swipe emette resize a raffica: scrollHeight forzerebbe un layout
+   sincrono ogni volta. Si rimisura al massimo una volta per frame */
+let measureRaf = 0;
+function requestMeasure() {
+  if (measureRaf) return;
+  measureRaf = requestAnimationFrame(() => { measureRaf = 0; measureMax(); paintBar(); });
+}
 
 function setNav(route) {
   document.querySelectorAll("nav a").forEach(a =>
@@ -38,8 +46,8 @@ function activate(route) {
 export function initScroll() {
   setNav("home");
   measureMax();
-  addEventListener("resize", () => { measureMax(); requestBar(); });
-  new ResizeObserver(() => { measureMax(); requestBar(); }).observe(document.querySelector("main"));
+  addEventListener("resize", requestMeasure);
+  new ResizeObserver(requestMeasure).observe(document.querySelector("main"));
   addEventListener("scroll", requestBar, { passive: true });
   requestBar();
 

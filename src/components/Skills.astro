@@ -8,7 +8,9 @@ const svgs = import.meta.glob('../icons/skills/*.svg', { query: '?raw', import: 
 const icon = (name) => {
   const raw = svgs[`../icons/skills/${name}.svg`];
   if (!raw) throw new Error(`Skills: "${name}.svg" non trovato in src/icons/skills/`);
-  return raw.replace('<svg ', '<svg class="stk-svg" aria-hidden="true" focusable="false" ');
+  return raw
+    .replace(/<metadata>[\s\S]*?<\/metadata>/, '')   // manifest C2PA: ~8 KB a icona di HTML inutile
+    .replace('<svg ', '<svg class="stk-svg" aria-hidden="true" focusable="false" ');
 };
 
 // testi di default (EN): l'i18n li sostituisce al caricamento
