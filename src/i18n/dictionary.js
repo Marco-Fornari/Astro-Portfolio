@@ -76,6 +76,8 @@ export const I18N = {
       "Corso di perfezionamento (25 CFU): GDPR, gestione del rischio, sicurezza di reti e software.",
     "edu.e3.desc":
       "Python, Linux, SQL, SIEM, IDS, risk assessment, identificazione delle minacce, controlli di sicurezza.",
+    "edu.e5.desc":
+      "Laurea triennale: storia e linguaggi del cinema, del teatro e dei media audiovisivi; analisi critica, scrittura e comunicazione.",
 
     /* SKILLS */
     "skills.kicker": "03 / COMPETENZE — STACK",
@@ -169,6 +171,8 @@ export const I18N = {
       "Postgraduate course (25 ECTS): GDPR, risk management, network and software security.",
     "edu.e3.desc":
       "Python, Linux, SQL, SIEM, IDS, risk assessment, threat identification, security controls.",
+    "edu.e5.desc":
+      "Bachelor's degree: history and languages of film, theatre and audiovisual media; critical analysis, writing and communication.",
 
     /* SKILLS */
     "skills.kicker": "03 / SKILLS — STACK",
