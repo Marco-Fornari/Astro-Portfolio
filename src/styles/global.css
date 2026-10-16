@@ -83,6 +83,7 @@
   --sans:"Helvetica Neue",Helvetica,"Inter",Arial,sans-serif;
   --pad:clamp(20px,4.5vw,72px);
   --nav-h:76px;
+  --deep:hsl(216 30% 4.5%);
   --ease-out:cubic-bezier(.16,1,.3,1);
 }
 
@@ -164,7 +165,7 @@ body::after{
 header{
   position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;
   display:flex;align-items:center;justify-content:space-between;
-  padding:0 var(--pad);pointer-events:none;
+  padding:0 max(var(--pad),env(safe-area-inset-right)) 0 max(var(--pad),env(safe-area-inset-left));pointer-events:none;
 }
 nav{display:flex;align-items:center;gap:clamp(16px,2.6vw,40px);pointer-events:auto}
 nav a{
@@ -179,13 +180,13 @@ nav a.on{color:var(--ink);border-bottom-color:var(--accent)}
 .lang button{background:none;border:0;padding:2px 1px;cursor:pointer;color:var(--ink-faint);letter-spacing:.14em;font-family:inherit;font-size:inherit;transition:color .25s}
 .lang button:hover{color:var(--ink-dim)}
 .lang button.on{color:var(--ink)}
-body:not([data-route="home"]) .lang button{color:rgba(255,255,255,.55)}
-body:not([data-route="home"]) .lang button.on{color:#fff}
-body:not([data-route="home"]) .lang span{color:rgba(255,255,255,.4)}
+body:is(:not([data-route="home"]),[data-scrolled]) .lang button{color:rgba(255,255,255,.55)}
+body:is(:not([data-route="home"]),[data-scrolled]) .lang button.on{color:#fff}
+body:is(:not([data-route="home"]),[data-scrolled]) .lang span{color:rgba(255,255,255,.4)}
 body[data-route="home"] nav .home-link{display:none}
-body:not([data-route="home"]) nav a{color:#fff}
-body:not([data-route="home"]) nav a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.4)}
-body:not([data-route="home"]) nav a.on{border-bottom-color:var(--accent)}
+body:is(:not([data-route="home"]),[data-scrolled]) nav a{color:#fff}
+body:is(:not([data-route="home"]),[data-scrolled]) nav a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.4)}
+body:is(:not([data-route="home"]),[data-scrolled]) nav a.on{border-bottom-color:var(--accent)}
 
 /* ============================================================
    FLOW
@@ -617,7 +618,7 @@ h1{font-weight:700;letter-spacing:-.015em;line-height:.98;text-transform:upperca
 
 /* chrome over the poster: header goes black, noise and scroll cue adapt */
 header{transition:background-color .3s}
-body:not([data-route="home"]) header{background:var(--deep)}
+body:is(:not([data-route="home"]),[data-scrolled]) header{background:var(--deep)}
 body:not([data-route="home"])::after{opacity:0}
 body:not([data-route="home"]) .scroll-btn{color:hsl(var(--foreground) / .7)}
 body:not([data-route="home"]) .scroll-btn:hover{color:var(--accent)}
@@ -676,7 +677,7 @@ nav a{white-space:nowrap}
   .lang{font-size:10px;gap:5px;letter-spacing:.08em}
 }
 @media (max-width:380px){
-  header{padding:0 16px}
+  header{padding:0 max(16px,env(safe-area-inset-right)) 0 max(16px,env(safe-area-inset-left))}
   nav{gap:8px}
   nav a{font-size:9.5px;letter-spacing:.02em}
   .lang{gap:3px;letter-spacing:.02em}

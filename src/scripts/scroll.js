@@ -9,10 +9,15 @@ const progressEl = document.getElementById("progress");
 /* barra di avanzamento: scaleX sul compositor invece di width (che
    ricalcolava il layout a ogni evento di scroll); al massimo un
    aggiornamento per frame, con l'altezza del documento in cache */
-let maxScroll = 1, barRaf = 0;
+let maxScroll = 1, barRaf = 0, wasScrolled = false;
 function measureMax() { maxScroll = Math.max(1, document.documentElement.scrollHeight - innerHeight); }
 function paintBar() {
   barRaf = 0;
+  const scrolled = scrollY > 24;
+  if (scrolled !== wasScrolled) {
+    wasScrolled = scrolled;
+    document.body.toggleAttribute("data-scrolled", scrolled);
+  }
   if (progressEl) progressEl.style.transform = `scaleX(${Math.min(1, scrollY / maxScroll)})`;
 }
 function requestBar() { if (!barRaf) barRaf = requestAnimationFrame(paintBar); }
